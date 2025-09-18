@@ -1,0 +1,52 @@
+<footer>
+  <div class="footer-parent">
+    <div class="foot-cnt">
+      <div class="tija-logo">
+        <img src="/assets/logo/Layer_1.svg" alt="tijaruk-logo" />
+      </div>
+      <div>
+        <p>
+          With Tijaruk, your trade and business journey moves forward into a new
+          beginning.
+        </p>
+      </div>
+    </div>
+    <div class="quick-links">
+      <div>
+        <h3>Explore</h3>
+      </div>
+      <div class="links">
+        <ul>
+          <li><a routerLink="" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="about" routerLinkActive="active">About</a></li>
+          <li>
+            <a routerLink="services" routerLinkActive="active">Services</a>
+          </li>
+          <li><a routerLink="contact" routerLinkActive="active">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="social">
+      <div>
+        <h3>Follow Us</h3>
+      </div>
+      <div class="social-links">
+        <ul>
+          <li><a href="insta"><i class="fa-brands fa-instagram"></i></a></li>
+          <li><a href="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+          <li><a href="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mailbtn">
+      <div class="mail">
+        <input type="email" [(ngModel)]="email" name="email" id="email" placeholder="E-mail address" />
+      </div>
+      <div class="btn">
+        <button (click)="onSubmit()" type="submit">Subscribe</button>
+      </div>
+    </div>
+   
+  </div>
+</footer>

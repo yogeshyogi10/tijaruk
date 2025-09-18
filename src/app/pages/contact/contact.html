@@ -1,0 +1,83 @@
+<div class="contact">
+  <div class="section-1">
+    <app-navbar></app-navbar>
+
+    <div class="cont-para">
+      <h1 class="fade-up">Get in touch with us</h1>
+      <p class="fade-up">
+      <span>At Tijaruk, we empower Saudi businesses, entrepreneurs,<br>and global partners to thrive in today’s fast-moving<br> trade environment. From importing and exporting to <br>business setup, branding, and automation, we provide <br>end-to-end support designed to make every stage of<br> your journey smoother.</span><br><br>
+      <span>Whether you are starting fresh, scaling your operations,<br> or taking your products global, our team is here to guide<br>you with trusted expertise and personalized solutions.</span>
+      </p>
+    </div>
+  </div>
+
+  <section class="section-2">
+    <div class="btns fade-up">
+      <div>
+        <button >📞 +966545620344</button>
+      </div>
+      <div>
+        <button>🌐 www.tijaruk.com</button>
+      </div>
+      <div>
+        <button>📧 info@gmail.com</button>
+      </div>
+    </div>
+    <div class="section-2-1 reveal-left">
+      <div class="map-container" id="map">
+
+          <input
+    type="text"
+    placeholder="Search a place"
+    [(ngModel)]="searchQuery"
+    (input)="onSearchChange()"
+    class="search-box"
+    autocomplete="off"
+  />
+
+    <ul *ngIf="suggestions.length > 0" class="suggestions">
+    <li *ngFor="let place of suggestions" (click)="selectPlace(place)">
+      {{ place.display_name }}
+    </li>
+  </ul>
+
+  <button (click)="exportToGoogleSheet()" class="export-btn">
+  Save Location
+</button>
+    
+      </div>
+      <div class="column-1 reveal-right">
+        <div>
+          <h1 class="reveal-right">
+            Connect with us and<br>start building your trading<br>journey today.
+          </h1>
+        </div>
+        <div class="contact-form reveal-right">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-row">
+              <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Name" />
+              <input type="email" [(ngModel)]="formData.email" name="email" placeholder="Email" />
+            </div>
+            <div class="form-row">
+              <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="Phone" />
+              <input type="sub" [(ngModel)]="formData.subject" name="subject" placeholder="subject" />
+            </div>
+            <textarea id="messages" [(ngModel)]="formData.message" name="message"
+              placeholder="Enter your message"></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-3">
+    <div class="inner-cont">
+      <h1 class="fade-in">Subscribe to our <br>Newsletter</h1>
+      <input class="fade-up" type="email" [(ngModel)]="newsletterEmail" name="newsletterEmail"
+        placeholder="E-mail address" />
+      <button (click)="onSubmit()">Subscribe</button>
+    </div>
+  </section>
+</div>

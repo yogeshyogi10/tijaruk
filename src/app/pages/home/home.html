@@ -1,0 +1,252 @@
+<div class="home">
+  <div class="section-1">
+    <app-navbar></app-navbar>
+    <div>
+      <h1 class="reveal">Tijaruk got your trade <br> covered.</h1>
+      <p class="reveal">We are your partners from trade to business.</p>
+    </div>
+    <div class="buttons">
+      <div>
+        <button class="reveal-left" routerLink="contact">Contact Us</button>
+      </div>
+      <div  [routerLink]="['/about']">
+        <button class="reveal-right">Get Started</button>
+      </div>
+    </div>
+   <div class="btn" [class.hide]="hideWhatsapp" (click)="openWhatsApp()">
+      <img src="/assets/icons/whatsapp.svg" alt="whatsapp">
+    </div>
+  </div>
+
+
+  <div class="section-2">
+    <div class="img-2">
+      <img class="reveal-left" src="assets/images/About-1.png" alt="image2" />
+    </div>
+    <div class="abt-cnt">
+      <h4 class="reveal-right">About Tijaruk</h4>
+      <h1>
+        <span class="reveal-right">We are your complete</span>
+        <span class="reveal-right">trade and growth</span>     <span class="reveal-right">partner</span>
+      </h1>
+      <p class="reveal-right">
+        Our vision is to be the most trusted digital bridge between Saudi Arabia
+        and the world. Tijaruk exists to simplify global trade, empower Saudi
+        businesses, and guide emerging enterpreneurs from idea to market.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="section-3">
+    <div>
+      <h3 class="fade-up">What do We do?</h3>
+      <p class="sub-cnt fade-up">We make trade and business simple.</p>
+    </div>
+    <div class="container-parent">
+      <div class="container-1 fade-up" [routerLink]="['/services', 'import-export']" fragment="import-export">
+        <p>Import & Export<br />Solutions</p>
+      </div>
+      <div class="container-1 fade-up" [routerLink]="['/services', 'business-setup']" fragment="business-setup">
+        <p>Business Setup<br />in KSA</p>
+      </div>
+      <div class="container-1 fade-up" [routerLink]="['/services', 'enterpreneur']" fragment="enterpreneur">
+        <p>Enterpreneur<br />Development</p>
+      </div>
+      <div class="container-2 fade-up" [routerLink]="['/services', 'branding']" fragment="branding">
+        <p>Branding<br />& Marketing</p>
+      </div>
+      <div class="container-2 fade-up" [routerLink]="['/services', 'automation']" fragment="automation">
+        <p>Business Automation<br />& IT Solutions</p>
+      </div>
+      <div class="container-2 fade-up" [routerLink]="['/services', 'global-marketing']" fragment="global-marketing">
+        <p>Global Product<br />Marketing</p>
+      </div>
+    </div>
+  </div>
+
+<!--
+  <div class="section-4">
+    <div class="why-tija-parent">
+      <h5 class="slide-left">Why Tijaruk?</h5>
+      <h2 class="slide-right">We make trade and business simple.</h2>
+    </div>
+
+    <div class="reasons">
+      <div class="column-1 fade-up">
+        <div class="saudi">
+          <img class="one fade-up" src="/assets/icons/Hand-Shake.svg" alt="wholesalersimg" />
+          <p class="one fade-up">Built for Wholesalers &<br>Enterpreneurs.</p>
+        </div>
+        <div class="saudi">
+          <img class="two fade-up" src="/assets/icons/Global.svg" alt="saudiimg" />
+          <p class="two fade-up">Saudi-Focused, Gloabally<br>Connected.</p>
+        </div>
+        <div class="saudi">
+          <img class="three fade-up" src="/assets/icons/Trande.svg" alt="allinoneimg" />
+          <p class="three fade-up">All-in-One Digital Trade<br>Platform.</p>
+        </div>
+        <div class="saudi">
+          <img class="four fade-up" src="/assets/icons/Logistics.svg" alt="streamlineimg" />
+          <p class="four fade-up">Fast Turnaround &<br>Streamlined Logistics.</p>
+        </div>
+      </div>
+
+      <div class="column-2 fade-up">
+        <div class="saudi">
+          <img class="five fade-up" src="/assets/icons/Layer_2.svg" alt="trustedimg" />
+          <p class="five fade-up">Trusted, Verified Suppliers<br>Only.</p>
+        </div>
+        <div class="saudi">
+          <img class="six fade-up" src="/assets/icons/Support.svg" alt="endtoendimg" />
+          <p class="six fade-up">End-to-End Business<br>Support.</p>
+        </div>
+        <div class="saudi">
+          <img class="seven fade-up" src="/assets/icons/Personal-Business.svg" alt="personalizedimg" />
+          <p class="seven fade-up">Personalized Experienced<br>for Your Business .</p>
+        </div>
+        <div class="saudi">
+          <img class="eight" src="/assets/icons/Entrepreneurs.svg" alt="builtimg" />
+          <p class="eight">Built for Wholesalers &<br>Enterpreneurs</p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <div class="section-4">
+  <div class="why-tija-parent">
+    <h5 class="fade-up">Why Tijaruk?</h5>
+    <h2 class="fade-up">We make trade and business simple.</h2>
+  </div>
+
+  <div class="reasons-grid">
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Hand-Shake.svg" alt="wholesalersimg" />
+      <p>Built for Wholesalers &<br>Entrepreneurs</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Global.svg" alt="saudiimg" />
+      <p>Saudi-Focused, Globally<br>Connected</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Trande.svg" alt="allinoneimg" />
+      <p>All-in-One Digital Trade<br>Platform</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Logistics.svg" alt="streamlineimg" />
+      <p>Fast Turnaround &<br>Streamlined Logistics</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Layer_2.svg" alt="trustedimg" />
+      <p>Trusted, Verified Suppliers<br>Only</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Support.svg" alt="endtoendimg" />
+      <p>End-to-End Business<br>Support</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Personal-Business.svg" alt="personalizedimg" />
+      <p>Personalized Experience<br>for Your Business</p>
+    </div>
+    <div class="reason-card fade-up">
+      <img src="/assets/icons/Entrepreneurs.svg" alt="builtimg" />
+      <p>Built for Wholesalers &<br>Entrepreneurs</p>
+    </div>
+  </div>
+</div>
+
+<!--section 5-->
+  <div class="section-5">
+  <div id="sec-5">
+    <div class="testimonial-parent">
+      <h5 class="fade-up">Testimonials</h5>
+      <h3 class="fade-up">What Our Clients Says</h3>
+      <p class="fade-up">Our customers are at the heart of everything we do. Here’s what they have to say about their experience with our services.</p>
+    </div>
+
+<div class="testimonial-wrapper fade-up">
+  <div 
+    class="testimonial-card" 
+    *ngFor="let testimonial of testimonials; let i = index"
+    [ngClass]="{
+      'active': i === current,
+      'previous': i === getPreviousIndex(),
+      'next': i === getNextIndex()
+    }"
+  >
+    <div class="testimonial-rating">
+      <span class="stars">{{ testimonial.stars }}</span>
+      <span class="rating">{{ testimonial.rating }}</span>
+    </div>
+
+    <p class="testimonial-text">
+      {{ testimonial.text }}
+    </p>
+
+    <div class="testimonial-author">
+      <img [src]="testimonial.image" alt="author" />
+      <div>
+        <h4>{{ testimonial.name }}</h4>
+        <p>{{ testimonial.role }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<div class="testimonial-nav fade-up">
+  <button class="nav-btn up" (click)="prevTestimonial()">🡅</button>
+  <button class="nav-btn down" (click)="nextTestimonial()">🡇</button>
+</div>
+  </div>
+</div>
+<!--  
+  <div class="section-5">
+    <div id="sec-5">
+    <div class="testimonial-parent">
+      <h5 class="slide-left">Testimonials</h5>
+      <h3 class="slide-right">What our clients say</h3>
+    </div>
+    <div class="feedbacks fade-up">
+      <div class="testimonial-card1">
+        <div>
+             <img src="/assets/images/Testimonial-1.png" alt="test-1">    
+        </div>
+      </div>
+      <div class="testimonial-card1">
+        <div>
+          <img src="/assets/images/Testimonial-1.png" alt="test-2">
+        </div>
+      </div>
+      <div class="testimonial-card1">
+        <div>
+          <img src="/assets/images/Testimonial-1.png" alt="test-3">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>-->
+
+  <div class="section-6">
+    <div class="connect-column reveal-left">
+      <p>
+        Connect with us and<br />start building your<br />trading journey today
+      </p>
+    </div>
+    <div class="form reveal-right">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-row">
+          <input type="text" [(ngModel)]="formData.name" name="name" placeholder="Name" />
+          <input type="email" [(ngModel)]="formData.email" name="email" placeholder="Email" />
+        </div>
+        <div class="form-row">
+          <input type="tel" [(ngModel)]="formData.phone" name="phone" placeholder="Phone" />
+          <input type="sub" [(ngModel)]="formData.subject" name="subject" placeholder="subject" />
+        </div>
+        <textarea [(ngModel)]="formData.message" name="message" placeholder="Enter your message"></textarea>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
