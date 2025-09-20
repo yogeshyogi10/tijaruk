@@ -1,7 +1,7 @@
 /* Navbar container */
 .navb {
   position: fixed;
-  top: 0;
+  top: -80px;
   left: 0;
   width: 100vw;
   min-width: 100%;
@@ -24,6 +24,7 @@
 .navb .logo img {
   height: 50px;
   width: auto;
+  
 }
 
 /* Navbar links (desktop) */
@@ -33,6 +34,7 @@
   gap: 30px;
   margin: 0;
   padding: 0;
+  margin-top: 40%;
 }
 
 .navb .navbar ul li a {
@@ -44,6 +46,7 @@
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
+  margin-top: 20%;
 }
 
 /* ✅ Magic Line Effect */
@@ -111,7 +114,7 @@
     padding: 20px;
     gap: 5px;
     transform: translateX(100%);
-      background: rgba(255, 255, 255, 0.1); /* semi transparent */
+      background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -119,7 +122,7 @@
 
     transform: translateX(100%);
     transition: transform 0.4s ease-in-out;
-    z-index: 999; /* above content */
+    z-index: 999; 
     transition: transform 0.4s ease-in-out;
   }
 
@@ -156,6 +159,12 @@
   .navbar ul li a {
     gap: 0;
     right: 50px;
+  }
+}
+
+@media (min-width:700px){
+  .navb .logo img{
+    margin-top: 80%;
   }
 }
 

@@ -30,30 +30,12 @@ constructor(private el: ElementRef, private ngZone: NgZone) {}
     const allCards = Array.from(carouselEl.querySelectorAll('.value-card')) as HTMLElement[];
 
     this.ngZone.runOutsideAngular(() => {
-     
-
-     /* // Function to scale based on distance from center
-      const applyScaling = () => {
-        const rect = carouselEl.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-
-        allCards.forEach(card => {
-          const cardRect = card.getBoundingClientRect();
-          const cardCenter = cardRect.left + cardRect.width / 2;
-          const distance = Math.abs(centerX - cardCenter);
-
-          const scale = gsap.utils.mapRange(0, rect.width / 2, 1.2, 0.8, distance);
-          gsap.to(card, { scale, duration: 0.3, overwrite: true });
-        });
-      };
-
-          applyScaling();*/
 
       // Arrow buttons
       const leftBtn = document.querySelector('.arrow.left') as HTMLElement;
       const rightBtn = document.querySelector('.arrow.right') as HTMLElement;
 
-      const moveBy = 150; // how much to slide per click
+      const moveBy = 150; 
 
       leftBtn?.addEventListener('click', () => {
         gsap.to(carouselEl, {
@@ -194,48 +176,6 @@ constructor(private el: ElementRef, private ngZone: NgZone) {}
 
 
 
-
-
-
-   /* const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-  
-          const elements = entry.target.querySelectorAll('.fade-up');
-          if (entry.isIntersecting) {
-          elements.forEach((el: Element, index: number) => {
-            setTimeout(() => {
-              el.classList.add('show');
-            }, index * 200);
-          });
-        } else{
-              elements.forEach((el:Element) => {
-                el.classList.remove('show');
-              });
-            } // stagger: 200ms delay
-          });
-    }, { threshold: 0.6 });
-
-    // observe section containers
-    const sections = this.el.nativeElement.querySelectorAll('.section-1,.section-2, .section-3, .section-4, .section-5, .section-6');
-    sections.forEach((section: Element) => observer.observe(section));
-
-    const observer2 = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const elements = entry.target.querySelectorAll('.slide-left, .slide-right');
-      if (entry.isIntersecting) {
-        elements.forEach((el: Element, index: number) => {
-          setTimeout(() => {
-            el.classList.add('show');
-          }, index * 200);
-        });
-      } else {
-        elements.forEach((el: Element) => el.classList.remove('show'));
-      }
-    });
-  }, { threshold: 0.4 });
-
-  const slideSections = this.el.nativeElement.querySelectorAll('.section-2,.section-3,.section-4,.section-5');
-  slideSections.forEach((section: Element) => observer2.observe(section));*/
 
 
 

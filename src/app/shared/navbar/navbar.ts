@@ -113,8 +113,6 @@ toggleMenu() {
     });
   }
 
-
-
     openWhatsapp() {
   window.open(
     "https://wa.me/91994163807?text=Hello%20I%20want%20to%20know%20more",

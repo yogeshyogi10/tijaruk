@@ -1,6 +1,6 @@
 footer{
     display: flex;
-    height: 40vh;
+    max-height: auto;
     justify-content: space-between;
     text-align: center;
     padding: 40px 0%;
@@ -132,249 +132,6 @@ button:hover{
   flex-shrink: 0;
 }
 
-/* Tablet Screens 
-@media (max-width: 992px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-  }
-
-  .footer-parent {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-  }
-
-  .foot-cnt,
-  .links,
-  .social {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  input {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .btn {
-    padding: 40px 0;
-    text-align: center;
-  }
-}
-
-/* Mobile Screens 
-@media (max-width: 500px) {
-  footer {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .quick-links h3,
-  .social h3 {
-    font-size: 20px;
-  }
-
-  .links ul a {
-    font-size: 16px;
-  }
-
-  input {
-    width: 100%;
-    padding: 10px 20px;
-  }
-
-  button {
-    width: 120px;
-    font-size: 1rem;
-  }
-}
-
-.mailbtn {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 10px;
-  justify-content: center; /* center align 
-  margin-left: 0; 
-}
-
-input {
-  padding: 12px 20px;
-  width: 100%;
-  max-width: 500px; /* prevent too large 
-  box-sizing: border-box;
-}
-
-button {
-  width: auto; /* allow shrink/grow 
-  min-width: 100px;
-}
-
-@media (max-width: 400px) {
-  .mailbtn {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .mailbtn input,
-  .mailbtn button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 350px){
-  footer{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-  .footer-parent{
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    margin: 0;
-  }
-}
-  *//*
-@media (max-width: 768px) {
-  footer {
-    height: auto;
-    padding: 30px 0px;
-    justify-content: center;
-  }
-
-  .footer-parent {
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .foot-cnt {
-    font-size: 14px;
-  }
-
-  .quick-links h3,
-  .social h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .links ul a,
-  .social-links ul a {
-    font-size: 18px;
-    justify-content: center;
-  }
-  .social ul{
-    margin-top:90% ;
-  }
- 
-
-  .mailbtn {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 0;
-  }
-
- 
-  .mail input{
-    width: 100px;
-    margin-left: -120%;
-  }
-
-  .mailbtn button {
-    width: auto;
-    margin: 0;
-  }
-}
-
-@media (max-width: 450px) {
-  footer{
-    width: 90%;
-  }
-
-.links ul a{
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  font-size: 15px;
-}
-.quick-links{
-  display: flex;
-  flex-direction: column;
-}
-.social h3{
-  margin-top: -60%;
-}
-.mailbtn{
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: -10px;
-}
-.mail input{
-  width: 100px;
-}
-}
-
-@media(max-width:550px){
-  .mail{
-    justify-content: center;
-    padding: 0;
-    margin-right: -100%;
-  }
-  .btn{
-    padding: 0;
-    margin-right: -100%;
-  }
-}
-@media(max-width:450px){
-  footer{
-    max-width: 100%;   
-  }
-  .btn{
-    margin-left: 100%;
-    margin-top: 0%;
-  }
-  .social h3,.social ul{
-    margin-top: 0%;
-  }
-  .mail input{
-    width: 100px;
-  }
-}
-@media(max-width:780px){
-  .btn{
-    padding: 0;
-
-    }  }
-    @media(max-width:350px){
-      footer{
-        width: 88%;
-      }
-      .foot-cnt{
-        margin-left: -5%;
-      }
-      .social h3{
-        margin-left: -50%
-      }
-      .social-links ul{
-        margin-left: -50%;
-      }
-      .mailbtn{
-        display: flex;
-        flex-direction: column;
-      }
-      .mail{
-        margin-left: -70%;
-      }
-      .btn{
-        margin-left: -70%;
-      }
-    }*/
-
   
 @media (min-width: 1200px) {
   .footer-parent {
@@ -388,7 +145,7 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: auto; /* allow flexible height */
+    height: auto;
     padding: 0px;
   }
   .footer-parent {
@@ -419,6 +176,9 @@ button {
 
 /* Very small phones */
 @media (max-width: 400px) {
+  .footer{
+    max-height: 70vh;
+  }
   .quick-links h3,
   .social h3 {
     font-size: 20px;

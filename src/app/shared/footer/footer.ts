@@ -24,7 +24,7 @@ export class Footer {
       });
     }, { threshold: 0.5 });
 
-    observer.observe(this.el.nativeElement); // observe footer itself
+    observer.observe(this.el.nativeElement); 
   }
 
     onSubmit() {

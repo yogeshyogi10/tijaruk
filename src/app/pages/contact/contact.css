@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .section-1 p{
-    text-align: left; /* center align for mobile */
+    text-align: left; 
     align-items: center;
     width: 250px;
     left: 10%;
@@ -187,8 +187,8 @@
 .section-2{
      max-width: 100%;
     display: flex;
-    height: auto;
-    min-height: 70vh;
+    height: 100vh;
+    
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -443,13 +443,18 @@ textarea::placeholder{
   transform: translateX(100%);
 }
 
-
+@media(max-width:1200px){
+  .section-2{
+    min-height: 80vh;
+    
+  }
+}
 
 /* For tablets and below */
 @media (max-width: 768px) {
   .section-2 {
     flex-direction: column;
-    height: auto; /* remove fixed height */
+    height: auto; 
     padding: 30px 20px;
     gap: 20px;
   }
@@ -460,7 +465,7 @@ textarea::placeholder{
   }
 
   .section-2 .btns button {
-    width: 100%; /* buttons take full width */
+    width: 100%; 
   }
 
   .section-2-1 {
@@ -480,7 +485,7 @@ textarea{
 }
 
   .map-container {
-    height: 300px; /* smaller height for phones */
+    height: 300px; 
   }
 
 }
@@ -517,7 +522,7 @@ textarea{
   width: 60%;
 }
   textarea {
-    max-width: 90%; /* don’t restrict */
+    max-width: 90%; 
   }
 }
 @media (max-width:400px){
@@ -573,7 +578,7 @@ textarea{
 /* section-3 */
 
 .section-3 {
-  background: #5f0c66; /* purple background */
+  background: #5f0c66; 
   padding: 30px 10%;
   border-radius: 12px;
   display: flex;
@@ -707,7 +712,7 @@ textarea{
   .section-2 {
     flex-direction: column;
     padding: 30px 20px;
-    height: auto; /* let it grow */
+    height: auto; 
   }
 
   .map {

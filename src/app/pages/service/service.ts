@@ -46,155 +46,34 @@ ngOnInit() {
 
   ngAfterViewInit(): void {
 
-       this.ngZone.runOutsideAngular(() => {
-      this.initAnimations();
+  setTimeout(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          } else {
+            // Remove class when out of view so it replays on scroll back
+            entry.target.classList.remove('active');
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -20px 0px" }
+    );
+
+    const elements = this.el.nativeElement.querySelectorAll(
+      '.fade-in, .fade-up, .reveal, .reveal-left, .reveal-right'
+    );
+
+    console.log("Found elements:", elements.length);
+
+    elements.forEach((el: Element, index: number) => {
+      (el as HTMLElement).style.animationDelay = `${index * 0.03}s`; 
+      observer.observe(el);
     });
-  }
-
- initAnimations(): void {
-  // ✅ Section 1 (Hero)
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: '.section-1',
-      start: 'top 80%',
-      end: 'bottom 20%',
-      toggleActions: 'play none none reverse'
-    }
-  });
-
-  tl.from('.section-1 h1 span', {
-    y: 40,
-    opacity: 0,
-    stagger: 0.15,
-    duration: 1,
-    ease: "power3.out"
-  })
-  .from('.section-1 p', {
-    y: 30,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  }, "-=0.5");
-
-
- function createOddServiceAnimation(sectionId: string) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: sectionId,
-      start: 'top 90%',
-      end: 'bottom 50%',
-      scrub:1,
-      toggleActions: 'play none none reverse'
-    }
-  });
-
-  // Animate text content inside col-1 (heading, p, li, button)
-  tl.from(`${sectionId} .col-1 > *`, {
-    x: -80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.2
-  });
-
-  // Animate image from right
-  tl.from(`${sectionId} .col-2 img`, {
-    x: 80,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  }, "-=1.0");
+  }, 0);
 }
 
-  // ✅ Function for even services (2,4,6)
- function createEvenServiceAnimation(sectionId: string) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: sectionId,
-      start: 'top 90%',
-      end: 'bottom 50%',
-      scrub:1,
-      toggleActions: 'play none none reverse'
-    }
-  });
-
-  // Animate text content inside col-1 (heading, p, li, button)
-  tl.from(`${sectionId} .col-1 > *`, {
-    x: 80,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.2   // <-- makes points appear one by one
-  });
-
-  // Animate image from left
-  tl.from(`${sectionId} .col-2 img`, {
-    x: -80,
-    opacity: 0,
-    duration: 1.2,
-    ease: "power3.out"
-  }, "-=1.0");
-}
-gsap.registerPlugin(ScrollTrigger);
-
-const service5 = document.querySelector(".service-5");
-
-if (service5) {
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: service5,
-      start: "top 90%", // when section enters viewport
-      end: "bottom 90%",
-      scrub:1,
-      toggleActions: "play none none reverse"
-    }
-  });
-
-  // Heading from left
-  tl.from(".service-5 h1", {
-    x: -120,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  });
-
-  // Image from right
-  tl.from(".service-5 .img-1-1", {
-    x: 120,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  }, "-=0.8"); // overlap with heading
-
-  // Paragraph + points from left
-  tl.from(".service-5 .col-2-1 p, .service-5 .col-2-1 .info-1-1, .service-5 .col-2-1 .info-2-1, .service-5 .col-2-1 .info-3-1, .service-5 .col-2-1 .info-4-1, .service-5 .col-2-1 .info-5-1", {
-    x: -80,
-    opacity: 0,
-    duration: 0.6,
-    ease: "power3.out"
-  }, "-=0.5");
-
-  // Button from right
-  tl.from(".service-5 .btn-1", {
-    x: 100,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out"
-  }, "-=0.3");
-}
-
-
-
-  // Apply animations
-  createOddServiceAnimation("#import-export");    // Service 1
-  createEvenServiceAnimation("#business-setup");  // Service 2
-  createOddServiceAnimation("#entrepreneur");     // Service 3
-  createEvenServiceAnimation("#branding");        // Service 4
-  
-  createOddServiceAnimation("#global-marketing");// Service 6
-
-
-    }
 
 
     openWhatsApp(serviceName: string,servicedescription: string) {
@@ -202,10 +81,8 @@ if (service5) {
     const message = `Hello, I would like to schedule a consultation for your *${serviceName}* service.\n\nService Details: ${servicedescription}.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
-
-      
+ 
     }
-  
   }
 
 
