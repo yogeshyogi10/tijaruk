@@ -360,6 +360,12 @@ body{
   box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .container-parent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* section-4*/
 
 .section-4 {
@@ -948,14 +954,109 @@ textarea::placeholder{
     background: #d68a28;
 }
 
-@media (max-width:1500px){
-  textarea{
-    
-    
-    max-width: 450px;
-    
+/* ✅ Large Screens (Desktops / 15-inch laptops ~ ≥1366px) */
+@media (min-width: 1366px) {
+  .section-6 {
+    padding: 80px 150px; /* more breathing space */
+    gap: 60px;
   }
 
+  .connect-column p {
+    font-size: 3rem;
+    line-height: 1.6;
+  }
+
+  .form {
+    max-width: 600px;
+  }
+}
+
+/* ✅ Medium Screens (Tablets & small laptops ~ 768px–1024px) */
+@media (max-width: 1024px) {
+  .section-6 {
+    flex-direction: column; /* stack vertically */
+    align-items: center;
+    padding: 50px 40px;
+    text-align: center;
+  }
+
+  .connect-column {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .connect-column p {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 500px;
+  }
+ 
+  
+  textarea{
+    width: 93%;
+  }
+}
+
+/* ✅ Small Screens (Mobile ~ 481px–767px) */
+@media (max-width: 767px) {
+  .section-6 {
+    padding: 40px 25px;
+  }
+
+  .connect-column p {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .form-row {
+    flex-direction: column; /* stack inputs */
+    gap: 12px;
+  }
+
+  input, textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* ✅ Extra Small Screens (Phones ~ 320px–480px) */
+@media (max-width: 480px) {
+  .section-6 {
+    padding: 30px 15px;
+  }
+
+  .connect-column p {
+    font-size: 1.5rem;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input, textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+    width: 95%;
+  }
+
+  .submit-btn {
+    width: 100%; /* full width button */
+    font-size: 0.95rem;
+  }
 }
 
 /* Tablet */
@@ -970,30 +1071,14 @@ textarea::placeholder{
   }
   .section-2,
   .section-3,
-  .section-4,
-  .section-6 {
+  .section-4
+  {
     height: auto;   
     padding: 40px 20px;
   }
-  textarea{
-    width: 430px;
-  }
- 
-  
 }
 
-@media (max-width:920px){
-  textarea{
-    width: 350px;
-  }
-}
 
-@media(max-width:880px)
-{
-  textarea{
-    width: 400px;
-  }
-}
 /* Mobile */
 @media (max-width: 750px) {
   /* Navbar fix */
@@ -1031,8 +1116,8 @@ textarea::placeholder{
   .section-2,
   .section-3,
   .section-4,
-  .section-5,
-  .section-6 {
+  .section-5
+  {
     flex-direction: column;
     text-align: center;
     padding: 30px 21px;
@@ -1062,13 +1147,7 @@ textarea::placeholder{
    width: 100%;
    padding: 50px 50px 50px 32px;
   }
-  .section-6{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    max-width: 100%;
-    padding: 39px;
-  }
+  
   .section-2{
     justify-content: center;
     align-items: center;
@@ -1086,21 +1165,7 @@ textarea::placeholder{
     width: 350px;
   }
   
-  .form-row{
-    gap:22px
-  }
-  input{
-    max-width: 133px;
-    margin-left: -6%;
-  }
-  textarea{
-    max-width: 300px;
-    margin-left: -5%;
-  }
-  .submit-btn{
-    margin-left: -20px;
-    width: 330px;
-  }
+
   .section-2 .img-2 {
     margin-top: 50px;
   } 
@@ -1115,27 +1180,6 @@ textarea::placeholder{
 }
 }
 
-@media(max-width:400px){
-    .section-6{
-    max-width: 100%;
-    padding: 36px;
-  }
-    .form-row{
-    gap:22px
-  }
-  input{
-    max-width: 133px;
-    margin-left: -6%;
-  }
-  textarea{
-    max-width: 300px;
-    margin-left: -5%;
-  }
-  .submit-btn{
-    margin-left: -20px;
-    width: 330px;
-  }
-}
 @media (max-width: 768px) {
   .btn {
     bottom: 30px;
@@ -1155,7 +1199,7 @@ textarea::placeholder{
     width:100% ;
     padding: 0 2px;
   }
-  .section-2,.section-3,.section-4,.section-5,.section-6{
+  .section-2,.section-3,.section-4,.section-5{
     max-width: 80%;
   }
   .btn {
