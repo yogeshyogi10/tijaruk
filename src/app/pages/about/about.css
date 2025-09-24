@@ -1080,7 +1080,7 @@ object-fit: cover;
   }
 
   .carousel-wrapper {
-    width: 70%; /* narrower, so cards stay centered */
+    width: 700px; /* narrower, so cards stay centered */
     height: 250px;
   }
 
@@ -1100,12 +1100,12 @@ object-fit: cover;
 
   .left {
     left: 80px;
-    margin-top: -30px;
+    margin-top: 0px;
   }
 
   .right {
     right: 80px;
-    margin-top: -30px;
+    margin-top: 0px;
   }
 
   .dot {
