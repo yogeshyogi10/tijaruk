@@ -866,13 +866,13 @@ object-fit: cover;
 
 /* Position arrows */
 .left {
-  left: 60px; /* left outside carousel */
-  margin-top: 0px;
+  margin-left: 100px; /* left outside carousel */
+  margin-top: 0;
 }
 
 .right {
-  right: 60px; /* right outside carousel */
-  margin-top: 0px;
+  margin-right: 100px; /* right outside carousel */
+  margin-top: 0;
   
 }
 
@@ -898,326 +898,108 @@ object-fit: cover;
   transform: scale(1.2); /* slightly bigger */
 }
 
-/* Medium screens (tablets) 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
   .value-card {
-    flex: 0 0 200px;
-    font-size: 1rem;
-  }
-
-  .arrow {
-    font-size: 2rem;
-    left: 15px;
-    right: 5px;
-    margin-top: -250%;
-
-  }
-  .arrow.left{
-    left: -30%;
-  }
-  .arrow.right{
-    right: -30%;
-  }
-}
-
-/* Small screens (mobiles) 
-@media screen and (max-width: 768px) {
-  .values-carousel {
-    gap: 15px;
-  }
-
-  .value-card {
-    flex: 0 0 150px;
-    font-size: 0.9rem;
-    padding: 10px;
-  }
-
-  .arrow {
-    font-size: 1.8rem;
-    left: -10px;
-    right: -10px;
-    
-  }
-
-  .core-tlt h2 {
-    font-size: 28px;
-  }
-}
-
-/* Extra small screens (phones) 
-@media screen and (max-width: 480px) {
-.section-5{
-  max-height: 50vh;
-}
-
-  .value-card {
-    flex: 0 0 120px;
-    font-size: 0.8rem;
-    padding: 8px;
-  }
-
-  .arrow {
-    font-size: 1.5rem;
-    left: -5px;
-    right: -5px;
-  }
-
-  .arrow.right{
-    width: 20%;
-    right: -40%;
-    margin-left: 60%;
-  }
-  .arrow.left{
-    width: 20%;
-    left: 20%;
-    margin-right: -70%;
-  }
-
-  .core-tlt h2 {
-    font-size: 24px;
-  }
-}
-
-/* Tablets *
-@media (max-width: 1024px) {
-  .value-card {
-    width: 300px;
-    height: 140px;
-    font-size: 0.9rem;
-  }
-
-  .arrow {
-    font-size: 1.5rem;
-    padding: 8px;
-  }
-
-  .arrow.left {
-    left: -25px;
-  }
-
-  .arrow.right {
-    right: -25px;
-  }
-}
-
-/* Phones *
-@media (max-width: 768px) {
-  .core-tlt h2 {
-    font-size: 1.8rem;
-  }
-
-  .value-card {
-    width: 70%;
-    height: auto;
-    font-size: 0.9rem;
-    margin: 0 5px;
-  }
-
-  .carousel-wrapper {
-    width: 100%;
-  }
-
-  .arrow.left {
-    left: 5px;
-  }
-
-  .arrow.right {
-    right: 5px;
-  }
-}
-
-/* Extra small (mobile portrait) *
-@media (max-width: 480px) {
-  .core-tlt h2 {
-    font-size: 1.5rem;
-  }
-
-  .value-card {
-    width: 250px;
-    height: 150px;
-    font-size: 0.85rem;
-    padding: 8px;
-  }
-  
-
-  .arrow {
-    font-size: 1.2rem;
-    padding: 6px;
-  }
-}
-
-@media (max-width: 1280px) {
-  .value-card {
-    width: 220px;
-    height: 150px;
+    flex: 0 0 30%; /* ~3 cards visible */
+    max-width: 320px;
+    height: 180px;
     font-size: 18px;
   }
 
-  .arrow {
-    font-size: 2rem;
-  }
-
-  .arrow.left {
-    left: -30px;
-  }
-
-  .arrow.right {
-    right: -30px;
-  }
-}*/
-
-/* ✅ Responsive for screens ≥ 1300px */
-@media screen and (min-width: 1300px) {
-  .section-5 {
-    min-height: 50vh;
-    height: 90vh;
-    padding: 80px 0;
-  }
-
-  .core-tlt h2 {
-    font-size: 55px;
-    margin: 30px 0 60px;
-  }
-
   .carousel-wrapper {
-    width: 700px; /* narrower, so cards stay centered */
-    height: 250px;
-  }
-
-  .value-card {
-    width: 320px;
-    height: 200px;
-    font-size: 24px;
-    border-radius: 25px;
-    padding: 20px;
+    width: 90%;
   }
 
   .left, .right {
-    width: 60px;
-    height: 60px;
-    font-size: 2.5rem;
+    width: 55px;
+    height: 55px;
+    font-size: 2.2rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .left {
-    left: 80px;
-    margin-top: 0px;
+    left: -60px; /* arrows stay outside */
   }
 
   .right {
-    right: 80px;
-    margin-top: 0px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
+    right: -60px;
   }
 }
 
-
-@media(max-width: 1300px){
-  .left{
-    margin-top: -10%;
+/* Large desktops (≥1300px) → 4 cards */
+@media screen and (min-width: 1300px) {
+  .value-card {
+    flex: 0 0 250px; /* 4 cards visible */
+    font-size: 20px;
   }
-  .right{
-    margin-top: -10%;
+
+  .left {
+    left: -70px; /* arrows just outside wrapper */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .right {
+    right: -70px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
-
-
-/* Tablets */
+/* Tablets (768px–1024px) → 2 or 3 cards */
 @media (max-width: 1024px) {
-  .section-5{
-    max-height: 60vh;
-  }
   .value-card {
-    width: 180px;
-    height: 140px;
+    flex: 0 0 300px; /* ~3 cards visible */
     font-size: 16px;
-    margin: 0 10px;
-  }
-  .carousel-wrapper{
-    width: 780px;
-  }
-
-  .arrow {
-    font-size: 1.8rem;
-  }
-
-  .left {
-    left: 30px;
-    margin-top: 50px;
-  }
-
-  .right {
-    right: 30px;
-    margin-top: 50px;
-    
-  }
-}
-
-@media(max-width:820px){
-  .section-5{
-    max-height: 40vh;
-  }
-}
-
-/* Mobile landscape */
-@media (max-width: 768px) {
-  .section-5{
-    max-height: 40vh;
-  }
- 
-  .carousel-wrapper {
-    width: 95%;
-  }
-
-  .value-card {
-    width: 250px;
-    height: 150px;
-    font-size: 15px;
-    margin: 0 5px;
   }
 
   .left {
     left: 50px;
-    margin-top: 85px;
   }
 
   .right {
     right: 50px;
-    margin-top: 85px;
   }
 }
 
-/* Mobile portrait */
-@media (max-width: 480px) {
-  .section-5{
-    max-height: 60vh;
-  }
-  .core-tlt h2 {
-    font-size: 1.5rem;
-  }
-
+/* Small tablets (≤820px) → 2 cards */
+@media (max-width: 820px) {
   .value-card {
-    width: 250px;
-    height: 150px;
+    flex: 0 0 280px; /* 2 cards visible */
+  }
+}
+
+/* Mobile landscape (≤768px) → 1 card */
+@media (max-width: 768px) {
+  .value-card {
+    flex: 0 0 280px; /* show only 1 card, centered */
     font-size: 14px;
   }
 
-  .arrow {
-    font-size: 1.5rem;
-    padding: 5px;
+  .left {
+    left: 40px;
+  }
+
+  .right {
+    right: 40px;
   }
 }
 
-@media(max-width:400px){
-  .section-5{
-    max-height: 70vh;
+/* Mobile portrait (≤480px) → 1 card full width */
+@media (max-width: 480px) {
+  .value-card {
+    width: 250px; /* 1 card, bigger */
+    height: 160px;
+    font-size: 14px;
   }
-  .left,.right{
-    margin-top: 70px;
+
+  .left {
+    left: -30px;
+  }
+
+  .right {
+    right: -30px;
   }
 }
 
@@ -1225,7 +1007,7 @@ object-fit: cover;
 
 .section-6{
     position: relative;
-    background-image: url("/assets/images/BG.png");
+    background-image: url("/assets/images/BG.webp");
     padding: 80px 20px;
     text-align: center;
     color: #fff;

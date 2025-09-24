@@ -383,7 +383,7 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/assets/images/why-tijaruk.jpg") no-repeat center center;
+  background: url("/assets/images/why-tijaruk.webp") no-repeat center center;
   background-size: cover;
   opacity: 0.2; 
   z-index: -1; 
