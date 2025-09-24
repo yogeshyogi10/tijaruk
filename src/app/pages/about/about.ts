@@ -18,9 +18,23 @@ export class About implements AfterViewInit{
   @ViewChild('section1', { static: true }) section1!: ElementRef<HTMLElement>;
   @ViewChild('section2', { static: true }) section2!: ElementRef<HTMLElement>;
   @ViewChild('carousel', { static: true }) carousel!: ElementRef<HTMLElement>;
+  @ViewChild('carousel', { static: false }) carouselRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('leftArrow', { static: false }) leftArrowRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('rightArrow', { static: false }) rightArrowRef!: ElementRef<HTMLDivElement>;
+  @ViewChild('dotsContainer', { static: false }) dotsContainerRef!: ElementRef<HTMLDivElement>;
+
+    private currentIndex: number = 0;
+  private cardWidth: number = 290; // 250px card + 40px margin
+  private visibleCards: number = 3;
+  private totalCards: number = 0;
+  private maxIndex: number = 0;
+  private dots!: NodeListOf<HTMLSpanElement>;
+
 constructor(private el: ElementRef, private ngZone: NgZone) {}
 
   ngAfterViewInit(): void {
+
+    
 
      const carouselEl = this.carousel.nativeElement;
     const cards = Array.from(carouselEl.querySelectorAll('.value-card')) as HTMLElement[];
@@ -32,14 +46,14 @@ constructor(private el: ElementRef, private ngZone: NgZone) {}
     this.ngZone.runOutsideAngular(() => {
 
       // Arrow buttons
-      const leftBtn = document.querySelector('.arrow.left') as HTMLElement;
-      const rightBtn = document.querySelector('.arrow.right') as HTMLElement;
+      const leftBtn = document.querySelector('.left') as HTMLElement;
+      const rightBtn = document.querySelector('.right') as HTMLElement;
 
       const moveBy = 150; 
 
       leftBtn?.addEventListener('click', () => {
         gsap.to(carouselEl, {
-          x: `-=${moveBy}`,
+          x: `+=${moveBy}`,
           duration: 0.8,
           ease: "power2.out",
         });
@@ -47,7 +61,7 @@ constructor(private el: ElementRef, private ngZone: NgZone) {}
 
       rightBtn?.addEventListener('click', () => {
         gsap.to(carouselEl, {
-          x: `+=${moveBy}`,
+          x: `-=${moveBy}`,
           duration: 0.8,
           ease: "power2.out",
         });

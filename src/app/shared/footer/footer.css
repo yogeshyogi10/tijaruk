@@ -15,7 +15,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 50px;
+    gap: 120px;
     padding: 10px;
     margin: 0 auto;
    
@@ -136,6 +136,44 @@ button:hover{
 @media (min-width: 1200px) {
   .footer-parent {
     justify-content: space-between;
+    
+  }
+}
+
+/* ✅ Mobile screens (<768px) */
+@media (max-width: 950px) {
+  .footer-parent {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .foot-cnt,
+  .quick-links,
+  .social {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .links ul,
+  .social-links ul {
+    justify-content: center;
+  }
+
+  .mailbtn {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .mailbtn input {
+    width: 90%;
+  }
+
+  .mailbtn button {
+    width: 120px;
+    margin-left: 0;
   }
 }
 
