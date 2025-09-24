@@ -1066,6 +1066,55 @@ object-fit: cover;
   }
 }*/
 
+/* ✅ Responsive for screens ≥ 1300px */
+@media screen and (min-width: 1300px) {
+  .section-5 {
+    min-height: 50vh;
+    height: 90vh;
+    padding: 80px 0;
+  }
+
+  .core-tlt h2 {
+    font-size: 55px;
+    margin: 30px 0 60px;
+  }
+
+  .carousel-wrapper {
+    width: 70%; /* narrower, so cards stay centered */
+    height: 250px;
+  }
+
+  .value-card {
+    width: 320px;
+    height: 200px;
+    font-size: 24px;
+    border-radius: 25px;
+    padding: 20px;
+  }
+
+  .left, .right {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+
+  .left {
+    left: 80px;
+    margin-top: -90px;
+  }
+
+  .right {
+    right: 80px;
+    margin-top: -90px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
 @media(max-width: 1300px){
   .left{
     margin-top: -10%;
@@ -1095,12 +1144,12 @@ object-fit: cover;
 
   .left {
     left: 30px;
-    margin-top: 0px;
+    margin-top: 50px;
   }
 
   .right {
     right: 30px;
-    margin-top: 0px;
+    margin-top: 50px;
     
   }
 }
