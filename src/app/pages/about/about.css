@@ -936,13 +936,13 @@ object-fit: cover;
 
   .left {
     left: -70px; /* arrows just outside wrapper */
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
   }
 
   .right {
     right: -70px;
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
   }
 }
