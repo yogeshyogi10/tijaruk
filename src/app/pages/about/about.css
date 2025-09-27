@@ -1246,6 +1246,7 @@
 
   .left {
     margin-left: 40px; /* bring closer */
+    
   }
 
   .right {
@@ -1298,13 +1299,13 @@
 
   .left {
     left: -40px; /* arrows just outside wrapper */
-    top: 25%;
+    top: 20%;
     transform: translateY(-50%);
   }
 
   .right {
     right: -40px;
-    top: 25%;
+    top: 20%;
     transform: translateY(-50%);
   }
 }
@@ -1318,12 +1319,12 @@
 
   .left {
     left: 50px;
-    top: 55%;
+    top: 50%;
   }
 
   .right {
     right: 70px;
-    top: 55%;
+    top: 50%;
   }
 }
 
