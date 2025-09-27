@@ -1,30 +1,27 @@
 /* Navbar container */
 .navb {
   position: fixed;
-  top: -80px;
+  top: 0; /* keep navbar visible */
   left: 0;
-  width: 100vw;
-  min-width: 100%;
-  max-width: 100%;
+  width: -webkit-fill-available;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   background: transparent;
   z-index: 1000;
-  transition:  top 0.4s ease-in-out;
- 
+  transition: top 0.4s ease-in-out;
 }
 
 .navb.hidden {
-  top: -100%; /* moves navbar out of view */
+  top: -100%; /* hides navbar on scroll if needed */
 }
 
 /* Logo */
 .navb .logo img {
   height: 50px;
   width: auto;
-  
+  margin: 0; /* remove weird offsets */
 }
 
 /* Navbar links (desktop) */
@@ -34,11 +31,10 @@
   gap: 30px;
   margin: 0;
   padding: 0;
-  margin-top: 40%;
+  align-items: center; /* keep items vertically aligned */
 }
 
 .navb .navbar ul li a {
-  width: 100%;
   text-decoration: none;
   font-family: 'Ibrand';
   font-size: 16px;
@@ -46,7 +42,7 @@
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
-  margin-top: 20%;
+  padding: 5px 0; /* spacing instead of margin-top */
 }
 
 /* ✅ Magic Line Effect */
@@ -70,14 +66,18 @@
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  
   z-index: 1100;
-  
+
+  /* ✅ Position it properly */
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
 }
+
 .hamburger span {
   width: 25px;
   height: 3px;
-  margin-right: 90px;
   background: white;
   border-radius: 3px;
   transition: all 0.4s ease;
@@ -94,40 +94,32 @@
   transform: rotate(-45deg) translateY(-8px);
 }
 
-
-
 /* Mobile styles */
 @media (max-width: 600px) {
+  
   .hamburger {
     display: flex;
-    margin-right: -115%;
+    margin-left: auto; /* pushes it to the right within flexbox */
   }
 
+
+
   .navbar ul {
-    position: relative;
-    top: 10px;
-    right:8%;
-    
+    position: absolute;
+    top: 70px;
+    right: 20px;
     flex-direction: column;
     width: 220px;
-    height: 200px;
     padding: 20px;
-    gap: 5px;
-    transform: translateX(100%);
-      background: rgba(255, 255, 255, 0.1); 
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-
-    transform: translateX(100%);
+    transform: translateX(120%);
     transition: transform 0.4s ease-in-out;
-    z-index: 999; 
-    transition: transform 0.4s ease-in-out;
-  }
-
-  .navb .navbar ul li a {
-    max-width: 200px;
+    z-index: 999;
   }
 
   /* Show menu when toggled */
@@ -138,10 +130,7 @@
   .navbar ul li a {
     color: white;
     font-size: 18px;
-    top:15px;
-    right: -10px;
   }
-  
 }
 
 /* ✅ For large screens: always visible links, no hamburger */
@@ -149,23 +138,10 @@
   .navbar ul {
     display: flex !important;
     transform: none !important;
-  
     background: transparent !important;
     flex-direction: row !important;
   }
   .hamburger {
     display: none !important;
   }
-  .navbar ul li a {
-    gap: 0;
-    right: 50px;
-  }
 }
-
-@media (min-width:700px){
-  .navb .logo img{
-    margin-top: 80%;
-  }
-}
-
-

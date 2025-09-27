@@ -1299,13 +1299,13 @@
 
   .left {
     left: -40px; /* arrows just outside wrapper */
-    top: 40%;
+    top: 30%;
     transform: translateY(-50%);
   }
 
   .right {
     right: -40px;
-    top: 40%;
+    top: 30%;
     transform: translateY(-50%);
   }
 }
