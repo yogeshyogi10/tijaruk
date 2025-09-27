@@ -1279,12 +1279,12 @@
 
   .left {
     margin-left: 65px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .right {
     margin-right: 65px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -1298,13 +1298,13 @@
 
   .left {
     left: -40px; /* arrows just outside wrapper */
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
   }
 
   .right {
     right: -40px;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
   }
 }
