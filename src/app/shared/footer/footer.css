@@ -95,7 +95,7 @@ footer{
     outline: none;
     border: 1px solid white;
     width: 280px;
-    margin-left: 10%;
+    margin-left: 0%;
 }
 .mailbtn .mail input::placeholder{
     color: white;
@@ -115,7 +115,7 @@ button{
     font-weight: 500;
     cursor: pointer;
     transition: background 0.3s ease;
-    margin-left: 25%;
+    margin-left: 0%;
 }
 button:hover{
     background: #d68a28;
@@ -126,7 +126,7 @@ button:hover{
 .mailbtn{
     display: flex;
     gap: 10px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .mailbtn button{
   flex-shrink: 0;
