@@ -95,6 +95,7 @@ body{
   font-weight: 200;
   max-width: 90%; /* prevent overflow on small screens */
   margin: 0 0 20px clamp(16px, 5vw, 70px);
+  margin-top: 10%;
 }
 
 /* ✅ Responsive paragraph */

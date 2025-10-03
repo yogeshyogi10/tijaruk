@@ -972,7 +972,7 @@
 
 .carousel-wrapper {
   position: relative;
-  width: 82%;
+  width: 82%;;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1007,11 +1007,6 @@
   word-break: break-word;
 }
 
-.value-card:hover {
-  background-color: #4b006e;
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-}
 
 /* Arrows */
 .left,
