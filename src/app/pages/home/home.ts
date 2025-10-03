@@ -44,7 +44,7 @@ export class Home implements AfterViewInit{
     {
       stars: '★★★★☆',
       rating: '4.0',
-      text: 'Amazing experience, professional team, quick delivery...jdhuehfwehfuewcjds',
+      text: 'Amazing experience, professional team, quick delivery...',
       image: '/assets/images/Ellipse-13.png',
       name: 'David Wilson',
       role: 'Business Owner'
@@ -52,7 +52,7 @@ export class Home implements AfterViewInit{
     {
       stars: '★★★★★',
       rating: '5.0',
-      text: 'They exceeded my expectations, highly recommended! rywfwcjwncwjfifwf ',
+      text: 'They exceeded my expectations, highly recommended!  ',
       image: '/assets/images/Ellipse-13.png',
       name: 'Sara Lee',
       role: 'Entrepreneur'
@@ -82,7 +82,7 @@ prevTestimonial(): void {
 hideWhatsapp =false;
 
 openWhatsApp() {
-  const phoneNumber = '919944163807';  
+  const phoneNumber = '+966545620344';  
   const message = 'Hello! I would like to know more about your services.';  
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');

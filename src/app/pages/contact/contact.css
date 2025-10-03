@@ -90,7 +90,7 @@
 .section-1 h1 {
   position: relative;
   z-index: 2;
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   font-family: 'Ibrand';
   font-weight: 500;
   max-width: 600px;
@@ -114,11 +114,12 @@
 .section-1 p{
     position:relative;
     z-index: 2;
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-family: 'Poppins';
     margin-left: 10%;
     margin-bottom: 40px;
     color: white;
+    width: 95%;
 
      opacity: 0;
   transform: translateY(20px);
@@ -133,8 +134,8 @@
   .section-1 p{
     text-align: left; 
     align-items: center;
-    width: 250px;
-    left: 10%;
+    width: 405px;
+    left: 0%;
     margin-bottom:-10%;
     padding: 5%;
   }
@@ -161,7 +162,7 @@
 }
 @media (max-width:400px){
   .section-1 .cont-para{
-    margin-top: 50px;
+    margin-top: -40px;
     font-size: 1.2rem;
     height: 400px;
   }
@@ -187,7 +188,8 @@
 .section-2{
      max-width: 100%;
     display: flex;
-    height: 120vh;
+    height: auto;
+    min-height: 90vh;
     
     align-items: center;
     justify-content: center;
@@ -206,6 +208,8 @@
 }
 
 .section-2 .btns{
+  display: flex;
+  flex-direction: row;
     position: relative;
     display: flex;
     padding: 20px 30px;
@@ -451,8 +455,28 @@ textarea::placeholder{
 @media(max-width:1200px){
   .section-2{
     min-height: 100vh;
-    
+    flex-direction: column;
+    height: auto; 
+    padding: 30px 20px;
+    gap: 20px;
   }
+
+  .section-2 .btns {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .section-2 .btns button {
+    width: 100%; 
+  }
+
+  .section-2-1 {
+    flex-direction: column;
+    gap: 30px;
+    min-width: auto;
+    padding-right: 0;
+  }
+
 }
 
 /* For tablets and below */
@@ -465,7 +489,7 @@ textarea::placeholder{
   }
 
   .section-2 .btns {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
   }
 
@@ -493,6 +517,17 @@ textarea{
     height: 300px; 
   }
 
+}
+
+@media (max-width: 500px) {
+  .section-2 .btns {
+    flex-direction: column;
+    align-items: stretch; /* makes buttons full width */
+  }
+
+  .section-2 .btns button {
+    width: 100%; 
+  }
 }
 
 /* For very small screens */
@@ -566,19 +601,70 @@ textarea{
     gap: 10%;
   }
   .section-2 .btns{
-    display: flex;
-    flex-direction: column;
+  
     gap:20px;
   }
   .section-2.section-2-1{
-    display: flex;
-    flex-direction: column;
+    
     gap:40px
   }
 .section-2 .btns button{
   padding: 20px 10px;
 }
 }
+
+/* For large desktops / wide monitors (1440px and up) */
+@media (min-width: 1440px) {
+  .section-2 {
+    max-width: 1400px;       /* prevent too wide */
+    margin: 0 auto;          /* center the section */
+    padding: 60px 100px;     /* more breathing space */
+    
+  }
+
+  .section-2 .btns button {
+    width: 300px;            /* slightly bigger buttons */
+    font-size: 18px;
+    padding: 18px 40px;
+  }
+
+  .map-container, #map {
+    width: 600px;
+    height: 500px;
+  }
+
+  .section-2-1 .column-1 h1 {
+    font-size: 2.8rem;       /* upscale heading */
+  }
+}
+
+/* For ultra-wide monitors (1920px and up) */
+@media (min-width: 1920px) {
+  .section-2 {
+    max-width: 1700px;
+    padding: 80px 150px;
+    gap: 80px;
+  }
+
+  .section-2 .btns {
+    gap: 60px;
+  }
+
+  .section-2 .btns button {
+    width: 320px;
+    font-size: 20px;
+  }
+
+  .map-container, #map {
+    width: 700px;
+    height: 550px;
+  }
+
+  .section-2-1 .column-1 h1 {
+    font-size: 3rem;
+  }
+}
+
 
 /* section-3 */
 
@@ -711,7 +797,7 @@ textarea{
   }
   .section-1 p {
     font-size: 0.9rem;
-    margin-left: 5%;
+    margin-left: 0%;
   }
 
   .section-2 {

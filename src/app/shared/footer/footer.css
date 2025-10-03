@@ -1,319 +1,286 @@
-footer{
-    display: flex;
-    max-height: auto;
-    justify-content: space-between;
-    text-align: center;
-    padding: 40px 0%;
-    background: #5f0c66;
-    color: #fff;
-    flex-wrap: wrap;
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-}
-.footer-parent{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 120px;
-    padding: 10px;
-    margin: 0 auto;
-   
-
-}
-.foot-cnt{
-    max-width: 200px;
-    font-size: 15px;
-    font-weight: 200;
-    text-align: left;
-    font-family: 'Poppins';
-    line-height: 1.7;
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0px;
+  background: #5f0c66;
+  color: #fff;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0;
 }
 
-.quick-links h3{
-    font-size: 25px;
-    font-family: 'Poppins';
-    color: #e39b4d;
-    font-weight: 700;
-    text-align: left;
-    margin: 0px;
-}
-.links ul a{
-    font-size: 20px;
-    font-family: 'Ibrand';
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    line-height: 1.9;
-    display: flex;
-    flex-direction: column;
-}
-.links ul{
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    gap: 10px;
-}
-.links{
-    flex-direction: column;
-    display: flex;
-}
-.social-links ul a{
-    font-size: 20px;
-    font-family: 'Ibrand';
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    line-height: 1.9;
-}
-.social-links ul{
-    list-style: none;
-    text-align: left;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-.social h3{
-    font-size: 25px;
-    color: #e39b4d;
-    font-weight: 700;
-    font-family: 'Poppins';
-    text-align: left;
-    margin: 0px;
-}
-.mail{
-    padding: 80px 0 0 0;
-    
-}
-.mailbtn input{
-  flex: 1;
-  min-width: 200px;
-  max-width: 100%;
-    padding: 12px 10px;
-    background: #5f0c66;
-    border-radius: 8px;
-    outline: none;
-    border: 1px solid white;
-    width: 280px;
-    margin-left: 0%;
-}
-.mailbtn .mail input::placeholder{
-    color: white;
-    font-family: 'Poppins';
-}
-button{
-     background: #f4a742;
-    border: none;
-    width: 100px;
-    border-radius: 8px;
-    padding: 8px 10px;
-    color: #fff;
-    font-size: 1rem;
-    justify-content: left;
-    text-align: center;
-    font-family: 'Poppins';
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-left: 0%;
-}
-button:hover{
-    background: #d68a28;
-}
-.btn{
-    padding: 80px 0px;
-}
-.mailbtn{
-    display: flex;
-    gap: 10px;
-    margin-left: 10px;
-}
-.mailbtn button{
-  flex-shrink: 0;
+.footer-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.foot-cnt {
+  max-width: 220px;
+  font-size: 15px;
+  font-weight: 200;
+  text-align: left;
+  font-family: 'Poppins';
+  line-height: 1.7;
+}
+
+/* Headings */
+.quick-links h3,
+.social h3 {
+  font-size: 22px;
+  font-family: 'Poppins';
+  color: #e39b4d;
+  font-weight: 700;
   
+  margin: 0px 0 10px 0;
+}
+
+/* Links */
+.links ul,
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.links ul a,
+.social-links ul a {
+  font-size: 18px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links ul a:hover,
+.social-links ul a:hover {
+  color: #e39b4d;
+}
+
+.social-links ul {
+  flex-direction: row;
+  gap: 15px;
+}
+
+/* Newsletter */
+.mail {
+  padding-top: 20px;
+}
+
+.mailbtn {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.mailbtn input {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  padding: 12px 10px;
+  background: #5f0c66;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid white;
+  color: #fff;
+}
+
+.mailbtn input::placeholder {
+  color: white;
+  font-family: 'Poppins';
+}
+
+.mailbtn button {
+  background: #f4a742;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Poppins';
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mailbtn button:hover {
+  background: #d68a28;
+}
+
+/* -----------------------------
+   ✅ Responsive Media Queries
+--------------------------------*/
+
+/* Large screens (desktops >1200px) */
 @media (min-width: 1200px) {
   .footer-parent {
     justify-content: space-between;
-    
+    gap: 80px;
+  }
+  .mailbtn .btn button{
+    margin-top: 15%;
   }
 }
 
-/* ✅ Mobile screens (<768px) */
-@media (max-width: 950px) {
+/* Tablets Landscape (821px – 1180px) */
+@media (min-width: 821px) and (max-width: 1180px) {
   .footer-parent {
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-around;
+    gap: 40px;
+  }
+  .foot-cnt {
+    max-width: 250px;
+    text-align: left;
+  }
+  .mailbtn .btn button{
+    margin-top: 15%;
+  }
+}
+/* Tablets Portrait (601px – 820px) */
+@media (max-width: 820px) {
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .footer-parent {
+    flex-direction: row;       /* ✅ keep row layout */
+    flex-wrap: wrap;           /* ✅ wrap if not enough space */
+    justify-content: center;   /* ✅ center items */
+    gap: 30px;                 /* spacing between items */
     text-align: center;
   }
 
   .foot-cnt,
   .quick-links,
   .social {
-    max-width: 100%;
+    flex: 1 1 200px;   /* ✅ make items flexible but minimum 200px wide */
+    max-width: 250px;
     text-align: center;
   }
 
   .links ul,
   .social-links ul {
     justify-content: center;
+    text-align: center;
   }
 
   .mailbtn {
-    flex-direction: column;
+    flex-direction: row;      /* ✅ keep row */
     align-items: center;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .mailbtn input {
-    width: 90%;
-  }
-
-  .mailbtn button {
-    width: 120px;
-    margin-left: 0;
-  }
-}
-
-/* ✅ iPad Portrait (up to 820px wide) */
-@media (max-width: 820px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0px;
-    text-align: center;
-  }
-
-  .footer-parent {
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .foot-cnt, .quick-links, .social, .mail {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .links ul, .social-links ul {
     justify-content: center;
-    text-align: center;
-  }
-
-  .mailbtn {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
+    flex-wrap: wrap;          /* ✅ allow wrapping if small screen */
+    gap: 10px;
+    width: 100%;
   }
 
   .mailbtn input {
-    width: 90%;
-    margin-left: 0;
+    flex: 1 1 200px;
+    max-width: 300px;
   }
 
   .mailbtn button {
-    margin-left: 0;
+    flex-shrink: 0;
     width: auto;
     padding: 10px 20px;
+    margin-top: 17%;
   }
 }
+/* Mobile (≤600px) */
+@media (max-width: 600px) {
+  footer {
+    padding: 20px;
+  }
+  
+  .tija-logo,p{
+    margin-right: -70%;
+  }
 
-/* ✅ iPad Landscape (821px – 1180px wide) */
-@media (min-width: 821px) and (max-width: 1180px) {
   .footer-parent {
-    gap: 60px; /* reduce big gap */
-    flex-direction: row;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;       /* ✅ row layout */
+    flex-wrap: wrap;           /* ✅ wrap items if not enough space */
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
   }
 
-  .foot-cnt {
-    font-size: 14px;
-    max-width: 250px;
+  .foot-cnt,
+  .quick-links,
+  .social {
+    flex: 1 1 150px;          /* ✅ flexible but min 150px */
+    max-width: 220px;
+    
   }
 
-  .links ul a, .social-links ul a {
-    font-size: 18px;
+  .quick-links h3,
+  .social h3 {
+    margin-right: -70%;
+  }
+  .links ul a,
+  .social-links ul  {
+    font-size: 16px;
+    margin-right: -70%;
   }
 
   .mailbtn {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;      /* ✅ row for input + button */
+    flex-wrap: wrap;          /* ✅ wrap if too narrow */
     justify-content: center;
-    margin-left: 0;
+    gap: 10px;
+    width: 100%;
   }
 
   .mailbtn input {
-    width: 250px;
-    margin: 0;
+    flex: 1 1 180px;
+    max-width: 280px;
   }
 
   .mailbtn button {
-    margin: 0px 0 0 0;
-    margin-top: -20px;
+    flex-shrink: 0;
+    padding: 10px 20px;
+    width: auto;
   }
 }
 
-
-
-/* Tablets */
-@media (max-width: 600px) {
-  footer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 0px;
-  }
-  .footer-parent {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
-  .foot-cnt, .quick-links, .social {
-    max-width: 100%;
-    text-align: center;
-  }
-  .mailbtn {
-    flex-direction: column;
-    margin: 0;
-    gap: 10px;
-    align-items: center;
-  }
-  .mailbtn input, .mailbtn button {
-    width: 100%;
-    margin-left: 0;
-  }
-  .btn{
-    margin-top: -30%;
-  }
-  button{
-    margin-top: 50px;
-  }
-}
-
-/* Very small phones */
+/* Small Phones (≤400px) */
 @media (max-width: 400px) {
-  .footer{
-    max-height: 70vh;
+  .tija-logo,p{
+    margin-right: -50%;
   }
+
   .quick-links h3,
   .social h3 {
-    font-size: 20px;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+    margin-right: -50%;
   }
   .links ul a,
-  .social-links ul a {
-    font-size: 16px;
-  }
-  .mailbtn input {
-    min-width: auto;
+  .social-links ul  {
     font-size: 14px;
+    margin-right: -50%;
   }
-  button {
-    font-size: 14px;
-    padding: 6px 8px;
+
+  .mailbtn {
+    margin-top: -20%;
+    flex-direction: column;  /* ✅ stack only on very small phones */
+  }
+
+  .mailbtn input,
+  .mailbtn button {
     width: 100%;
-    margin-top: 50px;
+    max-width: 100%;
   }
 }

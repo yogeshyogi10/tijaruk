@@ -1,0 +1,151 @@
+
+.section-1{
+  background: url("/assets/images/Landing-BG.webp") no-repeat center center/cover;
+  height: auto;
+  min-height: 100vh;            
+  position: relative;       
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: white;  
+  padding: 0px;
+  margin: 0;
+}
+
+.section-1 h1 {
+  position: relative;
+  z-index: 3;
+  font-size: 2.8rem;
+  font-family:'iBrand';
+  font-weight: 200;
+  max-width: 600px;
+  margin-top: 180px;
+  margin-bottom: 20px;
+  bottom:15%;
+  margin-left: clamp(20px, 5vw, 70px);
+}
+
+.section-1 p{
+    position:relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-family: 'Poppins';
+    margin-bottom: 40px;
+    bottom: 15%;
+    margin-left: clamp(20px, 5vw, 70px);
+}
+
+.section-1 button{
+    display: flex;
+    position: relative;
+    padding: 12px 60px;
+    border:none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Roboto';
+    cursor: pointer;
+    margin-right: 15px;
+    transition: 0.3s;
+    z-index: 2;
+    gap: 15px;
+    transition: transform 0.3s ease, background 0.3 ease;
+}
+
+.section-1 button:first-child{
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    top: -20px;
+    right: -60px;
+}
+
+.section-1 button:first-child:hover{
+    background-color: rgba(255,255,255,0.2);
+
+}
+
+.section-1 button:last-child{
+    background: transparent;
+    color: white;
+}
+
+.section-1 button:last-child:hover{
+    background: #f59e0b;
+    transform: scale(1.1);
+}
+
+.buttons{
+  display: flex;
+}
+
+.btn {
+  position: fixed;              
+  bottom: 30px;             
+  right: 20px;                
+ border-radius: 50%;           
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #25d366;          
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatPulse 3s ease-in-out infinite; 
+}
+
+.btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0px 10px 25px rgba(37, 211, 102, 0.7);
+}
+
+.hide{
+  display:none
+}
+
+/* Floating animation */
+@keyframes floatPulse {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+}
+
+
+/* GSAP Animations*/
+.section-1 button:first-child {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  margin-left: clamp(20px, 5vw, 70px); 
+}
+
+.section-1 button:last-child {
+  background: transparent;
+  color: white;
+  margin-left: 10px;
+}
+
+
+.section-1 button:last-child:hover {
+  background: linear-gradient(135deg, #f59e0b, #ffb347);
+  transform: scale(1.12) translateY(-3px);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
+}
+
+.section-1 button:first-child:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+.btn:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.8);
+}

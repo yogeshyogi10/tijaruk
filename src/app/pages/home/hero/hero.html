@@ -1,0 +1,20 @@
+<div class="home">
+  <!--section1-->
+  <div class="section-1">
+    <app-navbar></app-navbar>
+    <div>
+      <h1 class="reveal">Tijaruk got your trade <br> covered.</h1>
+      <p class="reveal">Tijaruk – Your Complete Trade & Growth Partner<br>Grow your business with us- From sourcing to<br>branding, globally.</p>
+    </div>
+    <div class="buttons">
+      <div>
+        <button class="reveal-left" routerLink="contact">Contact Us</button>
+      </div>
+      <div  [routerLink]="['/about']">
+        <button class="reveal-right">Get Started</button>
+      </div>
+    </div>
+   <div class="btn" [class.hide]="hideWhatsapp" (click)="openWhatsApp()">
+      <img src="/assets/icons/whatsapp.svg" alt="whatsapp">
+    </div>
+  </div>

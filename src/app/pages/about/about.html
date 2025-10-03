@@ -104,38 +104,42 @@
     </div>
   </section>
 
-  <!--section 5-->
   <section class="section-5">
-    <div class="core-tlt fade-up">
-      <h2>Our Core Values</h2>
-    </div>
-    <div>
+  <div class="core-tlt fade-up">
+    <h2>Our Core Values</h2>
+  </div>
 
-      <div #leftArrow class="left">&#10094;</div>
-      <div class="carousel-wrapper fade-up">
+  <div class="carousel">
+    <!-- Left arrow -->
+    <div class="left" (click)="prevSlide()">&#10094;</div>
 
-        <div #carousel class="values-carousel">
-          <div class="value-card">Saudi-First <br /> Global Connection</div>
-          <div class="value-card">Innovation & <br /> Excellence</div>
-          <div class="value-card">Clarity & <br /> Transparency</div>
-          <div class="value-card">Growth with <br /> Real Support</div>
-          <div class="value-card">Trust & <br /> Reliability</div>
-          <div class="value-card">Sustainable <br /> Impact</div>
+    <!-- Carousel wrapper -->
+    <div class="carousel-wrapper fade-up">
+      <div
+        class="values-carousel"
+        [ngStyle]="{ transform: 'translateX(' + offset + 'px)' }"
+      >
+        <div class="value-card" *ngFor="let value of values">
+          {{ value }}
         </div>
       </div>
-      <!-- Right arrow -->
-      <div #rightArrow class="right">&#10095;</div>
     </div>
 
-    <!-- Dots -->
-    <div #dotsContainer class="carousel-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+    <!-- Right arrow -->
+    <div class="right" (click)="nextSlide()">&#10095;</div>
+  </div>
 
+  <!-- Dots -->
+  <div class="carousel-dots">
+    <span
+      class="dot"
+      *ngFor="let dot of dots; let i = index"
+      [class.active]="i === activeDot"
+      (click)="goToSlide(i)"
+    ></span>
+  </div>
+</section>
 
-  </section>
 
   <!--section 6-->
   <section class="section-6">

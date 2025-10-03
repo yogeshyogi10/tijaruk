@@ -77,7 +77,7 @@ ngOnInit() {
 
 
     openWhatsApp(serviceName: string,servicedescription: string) {
-    const phone = "919944163807";
+    const phone = "966545620344";
     const message = `Hello, I would like to schedule a consultation for your *${serviceName}* service.\n\nService Details: ${servicedescription}.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

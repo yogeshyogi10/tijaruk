@@ -6,8 +6,8 @@
   </div>
 
   <!-- Hamburger -->
-  <div class="hamburger" id="hamburger" (click)="toggleMenu()"
-       [class.active]="menuActive">
+  <div class="hamburger" id="hamburger" (click)="toggleMenu()" [class.active]="menuActive">
+      
     <span></span>
     <span></span>
     <span></span>
@@ -16,7 +16,7 @@
   <!-- Navbar links -->
   <div class="navbar">
     <ul [class.show]="menuActive">
-      <li><a routerLink="" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
       <li><a routerLink="/about" routerLinkActive="active">About</a></li>
       <li><a routerLink="/services" routerLinkActive="active">Services</a></li>
       <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>

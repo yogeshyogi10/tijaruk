@@ -1,196 +1,128 @@
-import { AfterViewInit, Component, ViewChild,ElementRef, NgZone} from '@angular/core';
-import { RouterLinkActive } from "@angular/router";
-import { Navbar } from "../../shared/navbar/navbar";
+import {
+  AfterViewInit,
+  Component,
+  ViewChild,
+  ElementRef,
+  NgZone,
+  HostListener,
+  OnInit,
+  NgModule
+} from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { Navbar } from "../../shared/navbar/navbar";
 import SplitType from 'split-type';
 import gsap from 'gsap';
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger)
+import { from } from 'rxjs';
+import { CommonModule } from '@angular/common';
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-about',
-  imports: [Navbar, RouterLink],
+  imports: [Navbar, RouterLink,CommonModule],
   templateUrl: './about.html',
   styleUrl: './about.css'
 })
-export class About implements AfterViewInit{
+export class About implements AfterViewInit, OnInit {
+  constructor(private el: ElementRef) {}
 
   @ViewChild('section1', { static: true }) section1!: ElementRef<HTMLElement>;
   @ViewChild('section2', { static: true }) section2!: ElementRef<HTMLElement>;
-  @ViewChild('carousel', { static: true }) carousel!: ElementRef<HTMLElement>;
   @ViewChild('carousel', { static: false }) carouselRef!: ElementRef<HTMLDivElement>;
   @ViewChild('leftArrow', { static: false }) leftArrowRef!: ElementRef<HTMLDivElement>;
   @ViewChild('rightArrow', { static: false }) rightArrowRef!: ElementRef<HTMLDivElement>;
   @ViewChild('dotsContainer', { static: false }) dotsContainerRef!: ElementRef<HTMLDivElement>;
 
-    private currentIndex: number = 0;
-  private cardWidth: number = 290; // 250px card + 40px margin
-  private visibleCards: number = 3;
-  private totalCards: number = 0;
-  private maxIndex: number = 0;
-  private dots!: NodeListOf<HTMLSpanElement>;
+  values = [
+    'Saudi-First \n Global Connection',
+    'Innovation & \n Excellence',
+    'Clarity & \n Transparency',
+    'Growth with \n Real Support',
+    'Trust & \n Reliability',
+    'Sustainable \n Impact'
+  ];
 
-constructor(private el: ElementRef, private ngZone: NgZone) {}
+  currentIndex = 0;
+  visibleCards = 1;
+  cardWidth = 270;
+  offset = 0;
+  activeDot = 0;
+  dots: number[] = [];
+
+  ngOnInit() {
+    this.updateVisibleCards();
+    this.updateDots();
+  }
 
   ngAfterViewInit(): void {
+    setTimeout(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+            } else {
+              entry.target.classList.remove('active');
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: "0px 0px -20px 0px" }
+      );
 
-    
+      const elements = this.el.nativeElement.querySelectorAll(
+        '.fade-in, .fade-up, .reveal, .reveal-left, .reveal-right'
+      );
 
-     const carouselEl = this.carousel.nativeElement;
-    const cards = Array.from(carouselEl.querySelectorAll('.value-card')) as HTMLElement[];
+      console.log("Found elements:", elements.length);
 
-    // Duplicate for infinite loop illusion
-    carouselEl.innerHTML += carouselEl.innerHTML;
-    const allCards = Array.from(carouselEl.querySelectorAll('.value-card')) as HTMLElement[];
-
-    this.ngZone.runOutsideAngular(() => {
-
-      // Arrow buttons
-      const leftBtn = document.querySelector('.left') as HTMLElement;
-      const rightBtn = document.querySelector('.right') as HTMLElement;
-
-      const moveBy = 150; 
-
-      leftBtn?.addEventListener('click', () => {
-        gsap.to(carouselEl, {
-          x: `+=${moveBy}`,
-          duration: 0.8,
-          ease: "power2.out",
-        });
+      elements.forEach((el: Element, index: number) => {
+        (el as HTMLElement).style.animationDelay = `${index * 0.03}s`;
+        observer.observe(el);
       });
+    }, 0);
+  }
 
-      rightBtn?.addEventListener('click', () => {
-        gsap.to(carouselEl, {
-          x: `-=${moveBy}`,
-          duration: 0.8,
-          ease: "power2.out",
-        });
-        
-      });
-    });
-  
-  
-  setTimeout(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          } else {
-            // Remove class when out of view so it replays on scroll back
-            entry.target.classList.remove('active');
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: "0px 0px -20px 0px" }
-    );
+  @HostListener('window:resize')
+  onResize() {
+    this.updateVisibleCards();
+    this.updateDots();
+    this.updateCarousel();
+  }
 
-    const elements = this.el.nativeElement.querySelectorAll(
-      '.fade-in, .fade-up, .reveal, .reveal-left, .reveal-right'
-    );
+  updateVisibleCards() {
+    const width = window.innerWidth;
+    if (width <= 600) this.visibleCards = 1;
+    else if (width <= 1024) this.visibleCards = 2;
+    else this.visibleCards = 4;
+  }
 
-    console.log("Found elements:", elements.length);
+  updateDots() {
+    const totalDots = Math.ceil(this.values.length / this.visibleCards);
+    this.dots = Array(totalDots).fill(0);
+  }
 
-    elements.forEach((el: Element, index: number) => {
-      (el as HTMLElement).style.animationDelay = `${index * 0.03}s`; 
-      observer.observe(el);
-    });
-  }, 0);
+  updateCarousel() {
+    this.offset = -(this.currentIndex * this.cardWidth);
+    this.activeDot = Math.floor(this.currentIndex / this.visibleCards);
+  }
+
+  nextSlide() {
+    if (this.currentIndex < this.values.length - this.visibleCards) {
+      this.currentIndex++;
+      this.updateCarousel();
+    }
+  }
+
+  prevSlide() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateCarousel();
+    }
+  }
+
+  goToSlide(dotIndex: number) {
+    this.currentIndex = dotIndex * this.visibleCards;
+    this.updateCarousel();
+  }
 }
-   
-}
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
