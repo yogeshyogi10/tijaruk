@@ -41,7 +41,7 @@ export class Contact implements AfterViewInit {
             entry.target.classList.add('active');
           } else {
             // Remove class when out of view so it replays on scroll back
-            entry.target.classList.remove('active');
+            
           }
         });
       },

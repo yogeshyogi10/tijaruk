@@ -63,7 +63,7 @@ export class About implements AfterViewInit, OnInit {
             if (entry.isIntersecting) {
               entry.target.classList.add('active');
             } else {
-              entry.target.classList.remove('active');
+              
             }
           });
         },

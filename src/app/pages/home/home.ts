@@ -117,7 +117,7 @@ ngAfterViewInit(): void {
             entry.target.classList.add('active');
           } else {
             // Remove class when out of view so it replays on scroll back
-            entry.target.classList.remove('active');
+            
           }
         });
       },

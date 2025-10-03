@@ -658,7 +658,7 @@
   }
   .service-2 .import{
     width: 98%;
-    margin-left: -8%;
+    margin-left: 0%;
   }
 }
 
@@ -710,7 +710,7 @@
   .service-2 .col-1 p {
     font-size: 12px;
     width: 350px;
-    margin-left: -25%;
+    margin-left: -15%;
   }
 .service-2 .col-1 {
   margin-left: 70px;

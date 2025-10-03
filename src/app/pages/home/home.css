@@ -835,7 +835,7 @@ body{
 @media(max-width:400px){
    .testimonial-wrapper{
     height: 550px;
-    margin-left: -10%;
+    margin-left: -5%;
    
     
     
@@ -1217,8 +1217,9 @@ textarea::placeholder{
   }
 
   .submit-btn {
-    width: 100%; /* full width button */
+    width: 90%; /* full width button */
     font-size: 0.95rem;
+    margin-left: 6%;
   }
 }
 
@@ -1319,18 +1320,22 @@ textarea::placeholder{
 
   .section-2 .abt-cnt h4{
     margin-top: 20px;
+    margin-left: 10%;
   }
   .section-2 .abt-cnt h1{
     font-size: 34px;
+    margin-left: 5%;
   }
   .section-2 .abt-cnt p{
     font-size: 15px;
     width: 350px;
+    margin-left: 5%;
   }
   
 
   .section-2 .img-2 {
     margin-top: 50px;
+    margin-left: 13%;
   } 
   .testimonial-nav {
     position: relative;       

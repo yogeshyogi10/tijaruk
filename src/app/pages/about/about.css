@@ -201,7 +201,7 @@
   }
 
   .abt-cnt1 p {
-    font-size: 10px;
+    font-size: 11px;
     width: 100%;
     margin-top: 10%;
     text-align: left;
@@ -340,6 +340,7 @@
   .image-stack {
     max-width: 350px;
     aspect-ratio: 1 / 1.1;
+    margin-left: -20%;
   }
 
   .image-stack .image {
@@ -1039,11 +1040,11 @@
 }
 
 .left {
-  left: 20px;
+  left: 10px;
 }
 
 .right {
-  right: 20px;
+  right: 10px;
 }
 
 /* Dots */
@@ -1319,7 +1320,7 @@
   }
 
   .abt-cnt1 h2 {
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .who-cnt h1 {
