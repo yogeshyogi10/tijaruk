@@ -44,7 +44,7 @@
   color: white;
   font-weight: 500;
   position: relative;
-  top: 15px;
+  top: 0px;
   transition: color 0.3s ease;
   padding: 5px 0; /* spacing instead of margin-top */
 }
@@ -129,6 +129,10 @@
   .navb .navbar ul  {
     width: 150px;
     height: 175px;
+  }
+
+  .navb .navbar ul li {
+    margin-top: 5px; /* reset margin for mobile */
   }
 
   /* Show menu when toggled */

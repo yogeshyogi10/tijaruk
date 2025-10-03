@@ -1226,11 +1226,12 @@ textarea::placeholder{
 /* Tablet */
 @media (max-width: 1024px) {
   .section-1 h1 {
-    font-size: 3.4rem;
+    font-size: 2.4rem;
     margin-left: 40px;
+    margin-top: 15%;
   }
   .section-1 p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-left: 40px;
   }
   .section-2,

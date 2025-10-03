@@ -208,7 +208,7 @@
   font-weight: 500;
   font-family: 'Ibrand';
   max-width: 600px;
- margin-top: 10%;
+ margin-top: 20%;
   margin-left: 10%;
   color: white;
 }
@@ -313,6 +313,7 @@
     justify-content: space-between;
     padding: 20px;
     gap: 20px;
+    
   }
 
   .col-1 {
@@ -658,7 +659,7 @@
   }
   .service-2 .import{
     width: 98%;
-    margin-left: 0%;
+    margin-left: -5%;
   }
 }
 
@@ -678,6 +679,9 @@
     font-size: 12px;
   }
 
+  .service-2 .import{
+    margin-left: 5%;
+  }
   .service-2 .col-1 button {
     padding: 10px;
     font-size: 14px;
