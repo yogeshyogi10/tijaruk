@@ -931,7 +931,7 @@ body{
    align-items: center;
    width: 200px;
    height: 300px;
-   margin-left: 50px;
+   margin-left: 40px;
   }
   .testimonial-card.previous{
     margin-top: -38%;
@@ -947,7 +947,13 @@ body{
     font-size: 10px;
   }
   .nav-btn{
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+}
+
+@media(max-width:350px){
+  .testimonial-card.next,.testimonial-card.active,.testimonial-card.previous{
+    margin-left: 5%;
   }
 }
 @media (max-width:800px){
