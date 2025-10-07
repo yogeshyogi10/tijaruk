@@ -105,12 +105,12 @@
 }
 
 /* Small desktops */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .section-1 h1 {
     font-size: 20px;
   }
      .section-1 .sec-1{
-    margin-top: 40%;
+    margin-top: 10%;
   }
   .section-1 .sec-1 h1{
     margin-left: 10%;
@@ -729,6 +729,15 @@
   .col-2 .img-1-2 img{
 width: 300px;
 margin-left: 60px;
+  }
+}
+
+@media(max-width:370px){
+  .service-2 .col-1 p{
+    width: 300px;
+  }
+  .service-2 .col-1 h1{
+    font-size: 17px;
   }
 }
 

@@ -134,6 +134,9 @@ footer {
 
 /* Tablets Landscape (821px – 1180px) */
 @media (min-width: 821px) and (max-width: 1180px) {
+  footer{
+    max-height: 95vh;
+  }
   .footer-parent {
     justify-content: space-around;
     gap: 40px;
@@ -182,6 +185,7 @@ footer {
     flex-wrap: wrap;          /* ✅ allow wrapping if small screen */
     gap: 10px;
     width: 100%;
+    margin-bottom: 5%;
   }
 
   .mailbtn input {
@@ -240,6 +244,8 @@ footer {
     justify-content: center;
     gap: 10px;
     width: 100%;
+    margin-top: -20%;
+    margin-bottom: 15%;
   }
 
   .mailbtn input {
@@ -256,6 +262,9 @@ footer {
 
 /* Small Phones (≤400px) */
 @media (max-width: 400px) {
+  footer{
+    max-height: 90vh;
+  }
   .tija-logo,p{
     margin-right: -50%;
   }
@@ -278,10 +287,17 @@ footer {
     flex-direction: column;  /* ✅ stack only on very small phones */
   }
 
+  .mailbtn input{
+    margin-top: -5%;
+  }
+
   .mailbtn input,
   .mailbtn button {
     width: 100%;
     max-width: 100%;
     margin-left: -5%;
+  }
+  .mailbtn button {
+    margin-top: 0;
   }
 }
