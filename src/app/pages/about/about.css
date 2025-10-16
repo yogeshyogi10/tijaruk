@@ -484,6 +484,7 @@
 .section-3 p{
     max-width: 100%;
     width: 400px;
+     text-align: justify;
     font-size: 20px;
     font-family: 'Roboto';
     line-height: 1.3;
@@ -618,6 +619,7 @@
 
   .section-3 p {
     font-size: 17px;
+    text-align: justify;
   }
 }
 
@@ -1093,7 +1095,7 @@
 
 @media(max-width:1024px){
   .section-5{
-    min-height: 60vh;
+    max-height: 40vh;
   }
 }
 /* Responsive cards */
@@ -1154,6 +1156,7 @@
     font-family: 'Roboto';
     line-height: 1.6;
     margin-left: -5%;
+    text-align: left;
     
 }
 
@@ -1380,6 +1383,7 @@
     font-size: 14px;
     line-height: 1.4;
     margin-left: 2%;
+    text-align: left;
   }
 
   .values {

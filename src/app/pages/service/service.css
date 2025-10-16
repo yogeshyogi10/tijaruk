@@ -402,6 +402,7 @@
 
   .service-1 .col-1 p {
     font-size: 14px;
+    text-align: left;
   }
 
   .img-1-0 img {
@@ -434,6 +435,7 @@
   }
   .service-1 .col-1 p {
     font-size: 13px;
+    text-align: left;
   }
 
   .service-1 .col-1 button {
@@ -586,6 +588,7 @@
   .service-2 .col-1 p {
     font-size: 15px;
     line-height: 1.5;
+    margin-right: 10%;
   }
 
   /* Right column (image container) */
@@ -652,10 +655,12 @@
 
   .service-2 .col-1 h1 {
     font-size: 26px;
+    text-align: left;
   }
 
   .service-2 .col-1 p {
     font-size: 14px;
+    text-align: left;
   }
   .service-2 .import{
     width: 98%;
@@ -673,10 +678,12 @@
 
   .service-2 .col-1 h1 {
     font-size: 20px;
+    text-align: center;
   }
 
   .service-2 .col-1 p {
     font-size: 12px;
+    text-align: left;
   }
 
   .service-2 .import{
@@ -716,6 +723,7 @@
     font-size: 12px;
     width: 350px;
     margin-left: -15%;
+    text-align: left;
   }
 .service-2 .col-1 {
   margin-left: 70px;
@@ -919,6 +927,7 @@ margin-left: 60px;
 
   .service-5 .col-2-1 p {
     font-size: 14px;
+    text-align: left;
   }
 
    .service-5 .col-1-1 .img-1-1 {
@@ -948,6 +957,7 @@ margin-left: 60px;
 
   .service-5 .col-2-1 p {
     font-size: 13px;
+    text-align: left;
   }
 
   .img-1-1 img, .service-5 .col-1-1 .img-1-1 {
@@ -1180,6 +1190,7 @@ margin-left: 60px;
 
   .service-6 .col-1 p{
     margin-left: 4%;
+    text-align: left;
   }
 
   .service-6 .col-1 button {
