@@ -110,7 +110,7 @@
     font-size: 20px;
   }
      .section-1 .sec-1{
-    margin-top: 10%;
+    margin-top: 20%;
   }
   .section-1 .sec-1 h1{
     margin-left: 10%;
@@ -217,7 +217,7 @@
   position:relative;
   z-index: 2;
   font-size: 1rem;
-  font-family: 'Roboto';
+  font-family: 'poppins';
   
   color: white;
   margin-left: 10%;
