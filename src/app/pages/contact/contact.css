@@ -192,7 +192,7 @@
      max-width: 100%;
     display: flex;
     height: auto;
-    min-height: 110vh;
+    
     
     align-items: center;
     justify-content: center;
@@ -398,11 +398,11 @@ input,textarea{
   transition: border-color 0.3s ease;
 }
 
-/* textarea{ */
-    /* min-height: 120px;
+ textarea{ 
+     min-height: 120px;
     max-width: 470px;
-    resize: vertical; */
-/* } */
+    resize: vertical; 
+ } 
 
 input:focus, textarea:focus {
   border-color: #f9a825;
@@ -455,146 +455,222 @@ textarea::placeholder{
   transform: translateX(100%);
 }
 
-@media(max-width:1200px){
+/* ========== TINY PHONES (300–399.98px) ========== */
+@media (min-width: 300px) and (max-width: 399.98px){
   .section-2{
+    padding: 12px 14px;
+    gap: 14px;
     min-height: 100vh;
+  }
+
+  /* Buttons in a column, full width */
+  .section-2 .btns{
     flex-direction: column;
-    height: auto; 
-    /* padding: 30px 20px; */
-    gap: 20px;
-  }
-
-  .section-2 .btns {
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .section-2 .btns button {
-    width: 100%; 
-  }
-
-  .section-2-1 {
-    flex-direction: column;
-    gap: 30px;
-    min-width: auto;
-    /* padding-right: 0; */
-  }
-
-}
-
-
-/* For very small screens */
-@media (max-width: 480px) {
-  .section-2 {
-    padding: 0px 10px;
-    gap: 15px;
-  }
-
-  .section-2 .btns {
-    justify-content: center;
-    text-align: center;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
   }
-
-  .submit-btn {
-    font-size: 1rem;
-    padding: 8px;
-    max-width:100%;
-  }
-  .map{
-    max-width: 10px;
-  }
-  .map-container, #map{
-    max-width: 100%;
-  }
-
-  input{
-    max-width: 50%;
-  }
-.search-box {
-  width: 60%;
-}
-  textarea {
-    width: auto; 
-  }
-}
-@media (max-width:400px){
-  .section-2 .btns{
-    margin-left: -3%;
-
-  }
-  .map-container,#map{
-    max-width: 100%;
-  }
-  .section-2-1 .column-1 h1{
+  .section-2 .btns button{
     width: 100%;
-  }
-  input{
-    max-width: 40%;
-  }
-  textarea{
-    width: auto;
-  }
-  .submit-btn{
     max-width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
   }
-}
-@media (max-width:780px){
-  .map-container,#map{
-    width:100% ;
-  }
-  input{
-    max-width: 100%;
-  }
-}
-@media (max-width:1024px){
-  .section-2{
-    display: flex;
+
+  /* Stack map + form; remove width floors */
+  .section-2-1{
     flex-direction: column;
-    gap: 10%;
+    gap: 16px;
+    padding-right: 0;
+    min-width: 0;                 /* override earlier 380px */
   }
+
+  /* Map fills width; shorter height for tiny screens */
+  .map-container, #map{
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 300px;
+  }
+
+  /* Search UI fits narrow width */
+  .search-box{
+    position: absolute;
+    left: 12px; right: 12px;
+    width: calc(100% - 60px);
+    max-width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  .suggestions{
+    left: 12px; right: 12px;
+    width: calc(100% - 24px);
+    max-height: 45vh;
+    font-size: 14px;
+  }
+  .export-btn{
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* Form: stack inputs; full width */
+  .form{ min-width: 0; }
+  .form-row{
+    flex-direction: column;
+    gap: 10px;
+  }
+  input, textarea{
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  #messages{ min-height: 110px; }
+
+  /* Heading scales down a bit */
+  .section-2-1 .column-1 h1{
+    font-size: clamp(1.2rem, 3.5vw + 0.9rem, 1.6rem);
+    line-height: 1.25;
+    margin-top: 4px;
+  }
+}
+
+
+/* ========== SMALL PHONES / TALL PHONES (480–639px) ========== */
+@media (min-width: 400px) and (max-width: 639.98px){
+  .section-2{
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* stack the map + form column-wise */
+  .section-2-1{
+    flex-direction: column;      /* ensure column layout */
+    gap: 20px;
+    padding-right: 0;
+  }
+
+  /* buttons also in a column, centered */
   .section-2 .btns{
-  
-    gap:20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
   }
-  .section-2.section-2-1{
-    
-    gap:40px
-  }
-.section-2 .btns button{
-  padding: 20px 10px;
-}
-}
-
-
-
-/* For ultra-wide monitors (1920px and up) 
-@media (min-width: 1920px) {
-  .section-2 {
-    max-width: 1700px;
-    padding: 80px 150px;
-    gap: 80px;
+  .section-2 .btns button{
+    width: 100%;
+    max-width: 380px;            /* nice cap */
+    padding: 12px 16px;
+    font-size: 15px;
   }
 
-  .section-2 .btns {
-    gap: 60px;
+  /* map fills width */
+  .map-container, #map{
+    width: 100%;
+    max-width: 100%;
+    height: 380px;
   }
 
-  .section-2 .btns button {
-    width: 320px;
-    font-size: 20px;
-  }
-
-  .map-container, #map {
-    width: 700px;
-    height: 550px;
-  }
-
-  .section-2-1 .column-1 h1 {
-    font-size: 3rem;
+  /* inputs stack */
+  .form-row{
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
+
+/* ========== SMALL TABLETS (640–767px) ========== */
+@media (min-width: 640px){
+  .section-2{ padding: 24px; gap: 24px; }
+  .section-2 .btns{
+    flex-direction: row;        /* can start to row-wrap */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .section-2 .btns button{ width: auto; }
+  .map-container, #map{ height: 400px; }
+  .contact-form{ padding: 16px; }
+}
+
+/* ========== TABLETS / iPAD PORTRAIT (768–1023px) ========== */
+@media (min-width: 768px) and (max-width: 1023.98px){
+  .section-2{
+    padding: 28px 32px;
+    gap: 28px;
+  }
+
+  /* two columns from here up */
+  .section-2-1{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    padding-right: 0;
+  }
+
+  /* make map wider than the form at this breakpoint */
+  .map-container, #map{
+    height: 480px;                           /* a bit taller, too */
+    width: clamp(600px, 84vw, 760px);        /* wider on tablets */
+  }
+  /* give the map more flex share than the right column */
+  .map-container{ flex: 1.2 -1 0; }
+  .section-2-1 .column-1{ flex: 1 1 0; }
+
+  /* BUTTONS: force a COLUMN layout on tablets */
+  .section-2 .btns{
+    flex-direction: row;                  /* <-- stack */
+    align-items: center;                     /* center the column */
+    gap: 14px;
+    padding: 12px 0;
+  }
+  .section-2 .btns button{
+    width: 100%;
+    max-width: 420px;                        /* nice cap */
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  .column-1 h1{
+    font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.2rem);
+  }
+
+  .form-row{
+    flex-direction: row;                     /* two inputs side-by-side */
+    gap: 14px;
+  }
+  .contact-form{ padding: 18px; }
+}
+
+/* ========== LAPTOPS / iPAD LANDSCAPE (1024–1279px) ========== */
+@media (min-width: 1024px){
+  .section-2{ padding: 36px 48px; gap: 36px; }
+  .map-container, #map{ height: 500px; max-width: 560px; }
+  .contact-form{ padding: 20px; }
+  .column-1 h1{ font-size: 2.2rem; }
+  .search-box{ max-width: 360px; }
+  .suggestions{ max-height: 50vh; max-width: 360px; }
+}
+
+/* ========== DESKTOPS (1280–1535px) ========== */
+@media (min-width: 1280px){
+  .section-2{
+    padding: 48px 60px;
+    gap: 40px;
+  }
+  .section-2 .btns{ gap: 16px; }
+  .map-container, #map{ height: 520px; max-width: 600px; }
+  .column-1 h1{ font-size: 2.4rem; }
+}
+
+/* ========== LARGE / WIDE SCREENS (≥ 1536px) ========== */
+@media (min-width: 1536px){
+  .section-2{
+    padding-inline: 80px;
+    gap: 48px;
+  }
+  .map-container, #map{ height: 560px; max-width: 640px; }
+  .column-1 h1{ font-size: 2.6rem; }
+}
 
 /* section-3 */
 
@@ -718,7 +794,7 @@ textarea::placeholder{
   }
 }
 
-/* Mobile screens 
+/* Mobile screens */
 @media (max-width: 768px) {
   .section-1 h1 {
     font-size: 1.8rem;
