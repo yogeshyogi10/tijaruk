@@ -639,6 +639,9 @@ textarea::placeholder{
     gap: 14px;
   }
   .contact-form{ padding: 18px; }
+  #message{
+    width:auto;
+  }
 }
 
 /* ========== LAPTOPS / iPAD LANDSCAPE (1024–1279px) ========== */
