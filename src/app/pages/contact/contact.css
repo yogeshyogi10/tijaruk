@@ -483,12 +483,15 @@ textarea::placeholder{
 }
 
 /* For tablets and below */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .section-2 {
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
     height: auto; 
     padding: 30px 20px;
-    gap: 20px;
+    /* gap: 20px; */
   }
 
   .section-2 .btns {
