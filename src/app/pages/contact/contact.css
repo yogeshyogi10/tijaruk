@@ -640,7 +640,7 @@ textarea::placeholder{
   }
   .contact-form{ padding: 18px; }
   #message{
-    width:auto;
+    width:10px;
   }
 }
 
