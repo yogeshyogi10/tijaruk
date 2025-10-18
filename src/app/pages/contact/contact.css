@@ -508,16 +508,20 @@ textarea::placeholder{
   }
 
   .map {
-    width: 100%;
+    width: auto;
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
   }
-textarea{
+/* textarea{
   max-width: 95%;
-}
+} */
 
   .map-container {
+    display: flex;
     height: 300px; 
+    justify-content: center;
+    align-items: center;
+
   }
 
 }
