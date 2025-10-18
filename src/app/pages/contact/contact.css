@@ -599,13 +599,13 @@ textarea::placeholder{
     gap: 28px;
   }
 
-  /* two columns from here up */
+  /* two columns from here up
   .section-2-1{
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
     padding-right: 0;
-  }
+  } */
 
   /* make map wider than the form at this breakpoint */
   .map-container, #map{
@@ -639,9 +639,7 @@ textarea::placeholder{
     gap: 14px;
   }
   .contact-form{ padding: 18px; }
-  #message{
-    width:10px;
-  }
+  
 }
 
 /* ========== LAPTOPS / iPAD LANDSCAPE (1024–1279px) ========== */
