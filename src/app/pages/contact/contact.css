@@ -641,7 +641,7 @@ textarea::placeholder{
     gap: 14px;
   }
   .contact-form{ padding: 18px; }
-  textarea{width: 700px;height: 100px;resize: vertical;}
+  textarea{width: 650px;height: 100px;resize: vertical;}
 }
 
 /* ========== LAPTOPS / iPAD LANDSCAPE (1024–1279px) ========== */
