@@ -615,7 +615,7 @@ textarea::placeholder{
   /* make map wider than the form at this breakpoint */
   .map-container, #map{
     height: 480px;
-    margin-left: 10%;                           /* a bit taller, too */
+    margin-left: 0%;                           /* a bit taller, too */
     width: clamp(600px, 84vw, 760px);        /* wider on tablets */
   }
   /* give the map more flex share than the right column */
