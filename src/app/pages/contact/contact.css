@@ -592,6 +592,10 @@ textarea::placeholder{
   .contact-form{ padding: 16px; }
 }
 
+
+
+
+
 /* ========== TABLETS / iPAD PORTRAIT (768–1023px) ========== */
 @media (min-width: 768px) and (max-width: 1023.98px){
   .section-2{
@@ -729,9 +733,6 @@ textarea::placeholder{
   transition: border-color 0.2s ease, box-shadow 0.4s ease;
 }
 
-
-
-
 .section-3 input::placeholder {
   color: #ddd;
   font-size: 14px;
@@ -808,23 +809,6 @@ textarea::placeholder{
     margin-left: 0%;
   }
 
-  .section-2 {
-    flex-direction: column;
-    padding: 30px 20px;
-    height: auto; 
-  }
-
-  .map {
-    width: 100%;
-    height: auto;
-  }
-
-  .section-2-1 {
-    flex-direction: column;
-    gap: 20px;
-    padding-right: 0;
-  }
-
   .section-3 .inner-cont {
     flex-direction: column;
     gap: 15px;
@@ -851,7 +835,7 @@ textarea::placeholder{
 }
 
 @media (max-width:300px){
-  .section-1,.section-2.section-2-1,.section-3{
+  .section-1,.section-3{
     max-width: 300px;
     height: auto;
   }
