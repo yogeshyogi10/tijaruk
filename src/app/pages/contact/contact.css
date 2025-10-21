@@ -398,11 +398,7 @@ input,textarea{
   transition: border-color 0.3s ease;
 }
 
- textarea{ 
-     min-height: 120px;
-    max-width: 470px;
-    resize: vertical; 
- } 
+
 
 input:focus, textarea:focus {
   border-color: #f9a825;
@@ -615,7 +611,7 @@ textarea::placeholder{
   /* make map wider than the form at this breakpoint */
   .map-container, #map{
     height: 480px;
-    margin-left: 13%;                           /* a bit taller, too */
+    margin-left: 15%;                           /* a bit taller, too */
     width: clamp(600px, 84vw, 760px);        /* wider on tablets */
   }
   /* give the map more flex share than the right column */
@@ -645,7 +641,7 @@ textarea::placeholder{
     gap: 14px;
   }
   .contact-form{ padding: 18px; }
-  
+  textarea{width: 700px;height: 100px;resize: vertical;}
 }
 
 /* ========== LAPTOPS / iPAD LANDSCAPE (1024–1279px) ========== */
