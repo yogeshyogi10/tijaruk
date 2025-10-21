@@ -381,7 +381,7 @@ form{
 }
 
 input,textarea{
-    width: auto;
+    width: 100%;
     padding: 12px 15px;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius:8px;
@@ -614,7 +614,8 @@ textarea::placeholder{
 
   /* make map wider than the form at this breakpoint */
   .map-container, #map{
-    height: 480px;                           /* a bit taller, too */
+    height: 480px;
+    margin-left: 20%;                           /* a bit taller, too */
     width: clamp(600px, 84vw, 760px);        /* wider on tablets */
   }
   /* give the map more flex share than the right column */
